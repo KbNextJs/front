@@ -39,7 +39,7 @@ const Header = () => {
                         </div>
                     </li>{' '}
                     <li>
-                        <a href="http://pyeongchang-county.com/" target="_blank">
+                        <a href="" target="_blank">
                             평창카운티<span>노인복지주택</span>{' '}
                         </a>
                         <div>
@@ -53,13 +53,13 @@ const Header = () => {
                         <div>
                             <ul class="dep2">
                                 <li>
-                                    <a href="page/sub02_1.html">위례빌리지 소개 </a>
+                                    <a href="pages/sub02_1">위례빌리지 소개 </a>
                                 </li>{' '}
                                 <li>
-                                    <a href="page/sub02_3.html">서비스·시설 안내 </a>
+                                    <a href="pages/sub02_3">서비스·시설 안내 </a>
                                 </li>{' '}
                                 <li>
-                                    <a href="page/sub02_4.html">입소안내ㆍ접수 </a>
+                                    <a href="pages/sub02_4">입소안내ㆍ접수 </a>
                                 </li>{' '}
                             </ul>
                         </div>

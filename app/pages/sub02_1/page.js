@@ -7,11 +7,7 @@ import '../../public/src_css/a_reset.css';
 import '../../public/src_css/fonts.css';
 import '../../public/src_css/b_style.css';
 import '../../public/src_css/ds_style.css';
-import kb_logo from '../../public/design/images/skin/kb_logo.png';
-import btn_sitemap_close from '../../public/design/images/sub/btn_sitemap_close.png';
-import kb_logo_sub from '../../public/design/images/skin/kb_logo_sub.png';
-import mobile_btn from '../../public/design/images/skin/mobile_btn.png';
-import ico_sitemap from '../../public/design/images/skin/ico_sitemap.png';
+
 import sec02_2_1 from '../../public/design/images/sub/sec02_2_1.png';
 import ct_name from '../../public/design/images/sub/ct_name.jpg';
 import sub02_2_1_map from '../../public/design/images/sub/sub02_2_1_map.jpg';
@@ -19,185 +15,16 @@ import ico_car from '../../public/design/images/sub/ico_car.png';
 import ico_bus from '../../public/design/images/sub/ico_bus.png';
 import ico_parking from '../../public/design/images/sub/ico_parking.png';
 import family_tit from '../../public/design/images/skin/family_tit.png';
-import footer_logo from '../../public/design/images/skin/footer_logo.png';
-import { useRecoilState } from 'recoil';
-import { headerPopupState } from '../../layout';
+import Footer from '@/app/component/footer';
+import Header2 from '@/app/component/Header2';
 
 export default function site1() {
-    const [menuState, setMenuState] = useRecoilState(headerPopupState);
-
-    const clickMenu = () => {
-        console.log('메뉴 변경');
-        setMenuState((menuState) => !menuState);
-    };
-
     return (
         <>
             <Header></Header>
             <div id="bg_wrap"></div>
             <div id="layout_body" className="layout_sub">
-                <div id="header" className="header_sub">
-                    <div className="wrap h_wrap">
-                        <h1>
-                            <a href="../main.html">
-                                <img src={kb_logo_sub.src} alt="KB골든라이프" />
-                            </a>
-                            <a href="#" id="btn_mobile_gnb">
-                                <img src={mobile_btn.src} alt="mobile_button" />
-                            </a>
-                        </h1>
-                        <div className="gnb gnb_sub">
-                            <ul className="dep1">
-                                <li className="dep1_item">
-                                    <a href="sub1_1_1.html"> 회사소개 </a>
-                                    <div className="dep2_0">
-                                        <ul className="dep2">
-                                            <li>
-                                                <a href="sub1_1_2.html">CEO 인사말</a>
-                                            </li>
-                                            <li>
-                                                <a href="sub1_1_1.html">비전체계</a>
-                                            </li>
-                                            <li>
-                                                <a href="../bbs/sub1_4.html">공지/공시</a>
-                                            </li>
-                                            <li>
-                                                <a href="sub1_1_3.html">오시는 길</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li className="dep1_item">
-                                    <a href="http://pyeongchang-county.com/" target="_blank">
-                                        평창카운티<span>노인복지주택</span>
-                                    </a>
-                                    <div className="dep2_1">
-                                        <ul className="dep2"></ul>
-                                    </div>
-                                </li>
-                                <li className="dep1_item">
-                                    <a href="sub02_1.html" className="on">
-                                        {' '}
-                                        위례 빌리지<span>요양시설</span>{' '}
-                                    </a>
-                                    <div className="dep2_2">
-                                        <ul className="dep2">
-                                            <li>
-                                                <a href="sub02_1.html" className="on">
-                                                    위례빌리지 소개
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="sub02_3.html">서비스·시설 안내</a>
-                                            </li>
-                                            <li>
-                                                <a href="sub02_4.html">입소안내ㆍ접수</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li className="dep1_item">
-                                    <a href="Seocho_Dis.html">
-                                        {' '}
-                                        서초 빌리지<span>요양시설</span>{' '}
-                                    </a>
-                                    <div className="dep2_3">
-                                        <ul className="dep2">
-                                            <li>
-                                                <a href="Seocho_Dis.html">서초 빌리지 소개</a>
-                                            </li>
-                                            <li>
-                                                <a href="Seocho_sv.html">서초서비스·시설 안내</a>
-                                            </li>
-                                            <li>
-                                                <a href="Seocho_Rg.html">서초입소안내ㆍ접수</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li className="dep1_item">
-                                    <a href="sub03_1.html">
-                                        {' '}
-                                        케어센터<span>주.야간보호센터</span>{' '}
-                                    </a>
-                                    <div className="dep2_4">
-                                        <ul className="dep2">
-                                            <li>
-                                                <a href="sub03_1.html">서비스 소개</a>
-                                            </li>
-                                            <li>
-                                                <a href="sub03_2.html">강동케어센터 소개</a>
-                                            </li>
-                                            <li>
-                                                <a href="sub03_3.html">위례케어센터 소개</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li className="dep1_item">
-                                    <a href="sub1_3_1.html"> 인재채용 </a>
-                                    <div className="dep2_5">
-                                        <ul className="dep2">
-                                            <li>
-                                                <a href="sub1_3_1.html">인재상</a>
-                                            </li>
-                                            <li>
-                                                <a href="sub1_3_2.html">직무소개</a>
-                                            </li>
-                                            <li>
-                                                <a href="https://admin.kbgoldenlifecare.co.kr/recruit/main">채용공고</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li className="dep1_item">
-                                    <a href="../bbs/sub05_1.html"> 게시판 </a>
-                                    <div className="dep2_6">
-                                        <ul className="dep2">
-                                            <li>
-                                                <a href="../myreg/sub05_6.html">개소 예정 사업장 안내</a>
-                                            </li>
-                                            <li>
-                                                <a href="../bbs/sub05_1.html">프로그램/식단표</a>
-                                            </li>
-                                            <li>
-                                                <a href="sub1_2_1.html">자원봉사안내</a>
-                                            </li>
-                                            <li>
-                                                <a href="sub05_3.html">견학안내</a>
-                                            </li>
-                                            <li>
-                                                <a href="../bbs/sub2_3_1.html">상담신청</a>
-                                            </li>
-                                            <li>
-                                                <a href="bl_go.html">고객의 소리</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li className="dep1_item">
-                                    <a href="sub4_1.html"> 노인장기요양보험제도 </a>
-                                    <div className="dep2_7">
-                                        <ul className="dep2">
-                                            <li>
-                                                <a href="sub4_1.html">노인장기요양보험제도</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a href="#" id="btnSitemap" onClick={() => clickMenu()}>
-                                        <img src={ico_sitemap.src} alt="사이트맵" />
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div id="sub_gnb">
-                        <div className="dep2"></div>
-                        <div className="dep3"></div>
-                    </div>
-                </div>
+                <Header2></Header2>
                 <div id="container">
                     <div className="sub_con wrap">
                         <h3 className="sub_tit">위례빌리지 소개</h3>
@@ -508,29 +335,7 @@ export default function site1() {
                         KB경영연구소
                     </a>
                 </div>
-                <div id="footer">
-                    <div className="wrap">
-                        <dl className="dis_table">
-                            <dt className="dis_td f_logo">
-                                <a href="../main.html">
-                                    <img src={footer_logo.src} alt="KB골든라이프케어" />
-                                </a>
-                            </dt>
-                            <dd className="dis_td f_copy">
-                                <p>
-                                    서울 강남구 강남대로 298 6층 KB골든라이프케어<span></span>대표자 : 안상봉
-                                    <span></span>
-                                    <br />
-                                    사업자등록번호 : 822-87-00610
-                                    <span>
-                                        <a href="../shop_info/privacy.html">[개인정보 처리방침]</a>
-                                    </span>
-                                </p>
-                                <p>Copyright kbgoldenlifecare.co.kr. All Rights Reserved.</p>
-                            </dd>
-                        </dl>
-                    </div>
-                </div>
+                <Footer></Footer>
             </div>
         </>
     );
