@@ -17,11 +17,14 @@ import ico_parking from '../../public/design/images/sub/ico_parking.png';
 import family_tit from '../../public/design/images/skin/family_tit.png';
 import Footer from '@/app/component/footer';
 import Header2 from '@/app/component/Header2';
+import Family_site from '@/app/component/family_site';
+import MobileHeader from '@/app/component/mobileHeader';
 
-export default function site1() {
+export default function Sub02_1() { // 완성
     return (
         <>
             <Header></Header>
+            <MobileHeader></MobileHeader>
             <div id="bg_wrap"></div>
             <div id="layout_body" className="layout_sub">
                 <Header2></Header2>
@@ -290,51 +293,7 @@ export default function site1() {
                         </div>
                     </div>
                 </div>
-                <div className="family_site">
-                    <span>
-                        <img src={family_tit.src} alt="KB금융그룹" />
-                    </span>
-                    <a href="https://www.kbfg.com/Kor/index.jsp" target="_blank">
-                        KB금융지주
-                    </a>
-                    <a href="https://www.kbstar.com/" target="_blank">
-                        KB국민은행
-                    </a>
-                    <a href="http://www.kbinsure.co.kr/main.ec" target="_blank">
-                        KB손해보험
-                    </a>
-                    <a href="http://www.kbsec.com/" target="_blank">
-                        KB증권
-                    </a>
-                    <a href="https://card.kbcard.com/" target="_blank">
-                        KB국민카드
-                    </a>
-                    <a href="https://www.kblife.co.kr/" target="_blank">
-                        KB라이프생명
-                    </a>
-                    <a href="http://www.kbam.co.kr/" target="_blank">
-                        KB자산운용
-                    </a>
-                    <a href="https://www.kbcapital.co.kr/main.kbc" target="_blank">
-                        KB캐피탈
-                    </a>
-                    <a href="https://www.kbsavings.com/" target="_blank">
-                        KB저축은행
-                    </a>
-                    <a href="https://kbret.co.kr/main.do" target="_blank">
-                        KB부동산신탁
-                    </a>
-                    <a href="http://www.kbic.co.kr/" target="_blank">
-                        KB인베스트먼트
-                    </a>
-
-                    <a href="http://www.kds.co.kr/kor/main/index.asp" target="_blank">
-                        KB데이타시스템
-                    </a>
-                    <a href="https://www.kbfg.com/kbresearch/main.do" target="_blank">
-                        KB경영연구소
-                    </a>
-                </div>
+                <Family_site></Family_site>
                 <Footer></Footer>
             </div>
         </>

@@ -1,0 +1,94 @@
+.pm-navigation_vertical_toggle_a1_moall {
+    position: relative;
+    z-index: 10;
+    background-color: #57514c;
+}
+.pm-navigation_vertical_toggle_a1_moall ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.pm-navigation_vertical_toggle_a1_moall a {
+    display: block;
+    text-decoration: none;
+}
+.pm-navigation_vertical_toggle_a1_moall [role='toggle'] > a:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    width: 11px;
+    height: 6px;
+    background: url(../public/design/images/skin/mobile_gnb_down.png) 0 0 no-repeat;
+    background-size: 11px 6px;
+    margin-top: -3px;
+}
+.pm-navigation_vertical_toggle_a1_moall [role='toggle'].active > a:before {
+    background: url(../public/design/images/skin/mobile_gnb_up.png) 0 0 no-repeat;
+    background-size: 11px 6px;
+}
+.pm-navigation_vertical_toggle_a1_moall [role='toggle']:nth-child(2) > a:before {
+    display: none;
+}
+
+/*.pm-navigation_vertical_toggle_a1_moall .dep1 > li {border-top:1px solid #b4b7b9;}
+  .pm-navigation_vertical_toggle_a1_moall .dep1 > li:first-child {border-top:none;}*/
+.pm-navigation_vertical_toggle_a1_moall .dep1 > li > a {
+    position: relative;
+    padding: 12px 15px;
+    background: #57514c;
+    font-size: 14px;
+    color: #fff;
+}
+
+.pm-navigation_vertical_toggle_a1_moall .dep1 > li > a > span {
+    display: none;
+}
+.pm-navigation_vertical_toggle_a1_moall .dep1 > li.on > a,
+.pm-navigation_vertical_toggle_a1_moall .dep1 > li.active > a,
+.pm-navigation_vertical_toggle_a1_moall .dep1 > li:hover > a {
+    background: #fcaf17;
+    font-weight: 500;
+    color: #5b5149;
+}
+.pm-navigation_vertical_toggle_a1_moall .dep1 > li > div {
+    display: none;
+}
+
+.pm-navigation_vertical_toggle_a1_moall .dep2 {
+    background: #776c61;
+}
+
+.pm-navigation_vertical_toggle_a1_moall .dep2 > li:first-child a {
+    padding-top: 14px;
+}
+.pm-navigation_vertical_toggle_a1_moall .dep2 > li:last-child a {
+    padding-bottom: 14px;
+}
+.pm-navigation_vertical_toggle_a1_moall .dep2 > li > a {
+    padding: 6px 15px;
+    font-size: 13px;
+    color: #eee;
+}
+.pm-navigation_vertical_toggle_a1_moall .dep2 > li.on > a {
+    font-weight: bold;
+    color: #fff;
+}
+
+.pm-navigation_vertical_toggle_a1_moall .dep3 {
+    padding: 0;
+    background: #776c61;
+}
+.pm-navigation_vertical_toggle_a1_moall .dep3 > li > a {
+    padding: 4px 15px;
+    font-size: 13px;
+    color: #aea69f;
+}
+.pm-navigation_vertical_toggle_a1_moall .dep3 > li > a > span {
+    margin-right: 10px;
+}
+.pm-navigation_vertical_toggle_a1_moall .dep3 > li.on > a {
+    font-weight: bold;
+    color: #fff;
+}

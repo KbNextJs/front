@@ -1,0 +1,141 @@
+.scbd .lst-tab li .tab {
+    padding: 0;
+    width: 100%;
+    display: table;
+}
+
+.scbd .list_board .lst-board.lst-head {
+    display: block;
+}
+.scbd .list_board .lst-board li {
+    display: table;
+    width: 100%;
+    padding: 12px 0;
+}
+.scbd .list_board .lst-board li .td {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+.scbd .list_board .lst-board li .td .txt {
+    display: none;
+}
+.scbd .list_board .lst-board li .col_no {
+    width: 8%;
+    border: none !important;
+}
+.scbd .list_board .lst-board li .col_subject {
+    text-align: left;
+}
+.scbd .list_board .lst-board li .col_category {
+    width: 13%;
+}
+.scbd .list_board .lst-board li .col_name {
+    width: 15%;
+}
+.scbd .list_board .lst-board li .col_date {
+    width: 12%;
+}
+.scbd .list_board .lst-board li .col_hit {
+    width: 7%;
+}
+.scbd .list_board .lst-board li .col_vote {
+    width: 7%;
+}
+
+.scbd .list_board .lst-board.lst-head li div {
+    text-align: center;
+    padding: 0;
+}
+.scbd .list_board .lst-board.lst-body li {
+    padding: 0;
+}
+.scbd .list_board .lst-board.lst-body li .td {
+    padding: 10px 20px;
+}
+.scbd .list_board .lst-board.lst-body li .col_no {
+    display: table-cell;
+}
+.scbd .list_board .lst-board.lst-body li .col_subject a {
+    font-weight: normal;
+}
+.scbd .list_board .lst-board.lst-body li .inf {
+    float: none;
+    border-right: none;
+    margin-right: 0;
+}
+.scbd .list_board .lst-board.lst-body.lay-notice li {
+    position: static;
+    padding-right: 0;
+}
+.scbd .list_board .lst-board.lst-body.lay-notice li .falseNotice {
+    position: static;
+    display: block;
+    margin: 0 auto;
+}
+
+.scbd .list_board li.clr:after {
+    display: none;
+}
+.scbd .lst-tab li .tab .col_subject {
+    padding: 10px 0.3em 10px 10px;
+}
+.scbd .lst-cal table td {
+    padding-bottom: 3em;
+    width: 14.3%;
+}
+.scbd .lst-cal table .exist {
+    padding-bottom: 0.8em;
+}
+.scbd .lst-cal table td.sun {
+    width: 14.2%;
+}
+.scbd .lst-cal table .day {
+    padding: 0.5em 0.5em 0.3em 0.5em;
+    text-align: left;
+    vertical-align: top;
+}
+.scbd .lst-cal table .exist .day {
+    cursor: auto;
+}
+.scbd .lst-cal table .lst-board {
+    display: block;
+}
+.scbd .lst-cal table .lst-board li {
+    border-bottom: none;
+    padding: 0 0.5em 0 0.5em;
+}
+.scbd .lst-cal table .lst-board li a {
+    font-weight: normal !important;
+}
+.scbd .lst-cal table .lst-board .inf {
+    display: none;
+}
+.scbd .lst-cal .docList {
+    display: none;
+}
+
+.scbd .write dl {
+    display: table;
+    width: 100%;
+}
+.scbd .write dl dt,
+.scbd .write dl dd {
+    display: table-cell;
+}
+.scbd .write dl dt {
+    width: 180px;
+    vertical-align: middle;
+}
+.scbd .write dl dd {
+    padding-right: 0.5em;
+}
+
+.scbd .list_blog .det {
+    margin: 0 0 3em;
+    padding-bottom: 0em;
+}
+
+.scbd .toggleSearch {
+    text-align: center;
+}

@@ -10,11 +10,13 @@ import icoc_img__ from '../../public/design/images/sub/icoc_img__.png';
 import Header2 from '@/app/component/Header2';
 import family_tit from '../../public/design/images/skin/family_tit.png';
 import Footer from '@/app/component/footer';
+import MobileHeader from '@/app/component/mobileHeader';
 
-const Myreg = () => {
+const Sub02_4 = () => { //완성
     return (
         <>
             <Header></Header>
+            <MobileHeader></MobileHeader>
             <div id="layout_body" class="layout_sub">
                 <Header2></Header2>
                 <div id="container">
@@ -248,4 +250,4 @@ const Myreg = () => {
     );
 };
 
-export default Myreg;
+export default Sub02_4;

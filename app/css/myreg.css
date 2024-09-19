@@ -1,0 +1,7 @@
+.display_inline_block_cursor_pointer {
+    display: inline-block;
+    cursor: pointer;
+}
+.myreg_form {
+    margin: 0;
+}

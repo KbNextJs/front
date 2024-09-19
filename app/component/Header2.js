@@ -1,15 +1,33 @@
 'use client';
 import { useRecoilState } from 'recoil';
-import { headerPopupState } from '../layout';
+import { headerPopupState, mobileHeaderPopupState } from '../layout';
 import kb_logo_sub from '../public/design/images/skin/kb_logo_sub.png';
 import mobile_btn from '../public/design/images/skin/mobile_btn.png';
 import ico_sitemap from '../public/design/images/skin/ico_sitemap.png';
 const Header2 = () => {
     const [menuState, setmenuState] = useRecoilState(headerPopupState);
+    const [mobileMenuState, setMobileMenuState] = useRecoilState(mobileHeaderPopupState);
 
     const clickMenu = () => {
         console.log('메뉴 변경');
         setmenuState((menuState) => !menuState);
+    };
+    const clickMobileMenu = () => {
+        console.log('모바일 메뉴 변경');
+        const htmlTag = document.querySelector('html');
+        const bodyTag = document.querySelector('body');
+        if (mobileMenuState) {
+            htmlTag.style.height = 'auto';
+            htmlTag.style.overflow = 'visible';
+            bodyTag.style.height = 'auto';
+            bodyTag.style.overflow = 'visible';
+        } else {
+            htmlTag.style.height = '1047px';
+            htmlTag.style.overflow = 'hidden';
+            bodyTag.style.height = '1047px';
+            bodyTag.style.overflow = 'hidden';
+        }
+        setMobileMenuState((mobileMenuState) => !mobileMenuState);
     };
 
     return (
@@ -19,7 +37,7 @@ const Header2 = () => {
                     <a href="../main.html">
                         <img src={kb_logo_sub.src} alt="KB골든라이프" />
                     </a>
-                    <a href="#" id="btn_mobile_gnb">
+                    <a href="#" onClick={() => clickMobileMenu()} id="btn_mobile_gnb">
                         <img src={mobile_btn.src} alt="mobile_button" />
                     </a>
                 </h1>

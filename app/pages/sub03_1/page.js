@@ -12,11 +12,13 @@ import sub2_1_img03 from '../../public/design/images/sub/sub2_1_img03.jpg';
 import Header2 from '@/app/component/Header2';
 import Footer from '@/app/component/footer';
 import Family_site from '@/app/component/family_site';
+import MobileHeader from '@/app/component/mobileHeader';
 
-const Sub03_1 = () => {
+const Sub03_1 = () => {//완성
     return (
         <>
             <Header></Header>
+            <MobileHeader></MobileHeader>
             <div id="layout_body" class="layout_sub">
                 <Header2></Header2>
                 <div id="container">

@@ -1,9 +1,14 @@
 'use client';
 // 슬라이드 구현 해야함
-import { useEffect } from 'react';
-import $ from 'jquery';
-import 'bxslider/dist/jquery.bxslider.min.js';
-import 'bxslider/dist/jquery.bxslider.css';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
+import Image from 'next/image';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+// import $ from 'jquery';
+// import 'bxslider/dist/jquery.bxslider.min.js';
+// import 'bxslider/dist/jquery.bxslider.css';
+import { slider } from './jquery';
 import Header from '@/app/component/header';
 import '../../../cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css';
 import '../../public/src_css/c_slides.css';
@@ -68,40 +73,152 @@ import family_tit from '../../public/design/images/skin/family_tit.png';
 import Footer from '@/app/component/footer';
 import Family_site from '@/app/component/family_site';
 import Head from 'next/head';
+import MobileHeader from '@/app/component/mobileHeader';
 
 const Sub03_2 = () => {
-    useEffect(() => {
-        $(function () {
-            var slider = $('.bxslider').bxSlider({
-                auto: true,
-                pagerCustom: '#bx-pager',
-                onSlideBefore: function (currentSlideNumber, totalSlideQty, currentSlideHtmlObject) {
-                    $('.active-slide').removeClass('active-slide');
-                    $('#bx-pager li a[data-slide-index = "' + currentSlideHtmlObject + '"]').addClass('active-slide');
-                    if (currentSlideHtmlObject > 9) {
-                        thumbSlider.goToSlide(1);
-                    } else {
-                        thumbSlider.goToSlide(0);
-                    }
+    // 이미지 슬라이드 개발 남음
+    // useEffect(() => {
+    //     console.log('slider', slider);
+    // }, []);
+    // const [nav1, setNav1] = useState();
+    // const [nav2, setNav2] = useState();
+
+    // useEffect(() => {
+    //     if (nav1 && nav2) {
+    //         nav1.slickGoTo(nav2.slickCurrentSlide());
+    //     }
+    // }, [nav1, nav2]);
+
+    // const settings = {
+    //     dots: false,
+    //     infinite: true,
+    //     speed: 500,
+    //     slidesToShow: 1,
+    //     slidesToScroll: 1,
+    //     autoplay: true,
+    // };
+
+    // const thumbnailSettings = {
+    //     slidesToShow: 5,
+    //     slidesToScroll: 1,
+    //     asNavFor: nav1,
+    //     focusOnSelect: true,
+    //     responsive: [
+    //         {
+    //             breakpoint: 1140,
+    //             settings: {
+    //                 slidesToShow: 5,
+    //             },
+    //         },
+    //         {
+    //             breakpoint: 767,
+    //             settings: {
+    //                 slidesToShow: 4,
+    //             },
+    //         },
+    //         {
+    //             breakpoint: 479,
+    //             settings: {
+    //                 slidesToShow: 3,
+    //             },
+    //         },
+    //     ],
+    // };
+    const [nav1, setNav1] = useState(null);
+    const [nav2, setNav2] = useState(null);
+
+    const handleAfterChange = useCallback(
+        (index) => {
+            if (nav1) {
+                nav1.slickGoTo(index);
+            }
+        },
+        [nav1]
+    );
+
+    const settings = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+    };
+
+    const thumbnailSettings = {
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        focusOnSelect: true,
+        afterChange: handleAfterChange,
+        responsive: [
+            {
+                breakpoint: 1140,
+                settings: {
+                    slidesToShow: 5,
                 },
-                onSliderLoad: function () {
-                    $('#bx-pager li a[data-slide-index = "0"]').addClass('active-slide');
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 4,
                 },
-            });
-            var thumbSlider = $('#bx-pager ul').bxSlider({
-                pager: true,
-                pagerType: 'short',
-                pagerShortSeparator: '/',
-                onSliderLoad: function () {
-                    $('#bx-pager').css('visibility', 'visible');
+            },
+            {
+                breakpoint: 479,
+                settings: {
+                    slidesToShow: 3,
                 },
-            });
-        });
-    }, []);
+            },
+        ],
+    };
+
+    const images = [
+        care_center011490590851,
+        // bg_movie,
+        kbeoteo,
+        chang51487591213,
+        kbeoteo071487586141,
+        kbeoteo091487586131,
+        my_xml0114875861491487925776,
+        kbeoteo101487586126,
+        kbeoteo131487586122,
+        kbeoteo141487586117,
+        kbeoteo161487586111,
+        kbeoteo171487586106,
+        kbeoteo191487586092,
+        kbeoteo231487586087,
+        kbeoteo291487586082,
+        kbeoteo321487586077,
+        kbeoteo331487586073,
+        kb_center1487593553,
+        kbeoteo371487586064,
+        kbeoteo381487586058,
+        water__c3_w150_h100,
+        // bg_movie_thumb,
+        ffb21d171dae64c49fe712adee982_water__c3_w150_h100,
+        f8aae39e1d68f31b968a2b2320e835a_water__c3_w150_h100,
+        c1d799063601f53a5b7e075189c432_water__c3_w150_h100,
+        ccad6879ffe531cf38a51fc8598e3d5d_water__c3_w150_h100,
+        ee4953a26b32396d6b89e3f950418429_water__c3_w150_h100,
+        a7b894f6d896c329abd88de25d627e3d_water__c3_w150_h100,
+        e8c430b3d784ec56e9de4fd6ff55cce_water__c3_w150_h100,
+        f788547e7661b4b6cd6078ed4f96e0ad_water__c3_w150_h100,
+        ae285fb8b7c09ad7e0b1e1fbf1cf0f_water__c3_w150_h100,
+        bece32e9736dbf4a55581ccfca442_water__c3_w150_h100,
+        b84572725816ae2d779fc4e19d99be9a_water__c3_w150_h100,
+        ee94749637822d0ce48819c9d524ebe6_water__c3_w150_h100,
+        d20f77ff830c2b6464cf53afce7c5a65_water__c3_w150_h100,
+        ac0b7db0c7c23da4ff1f501687ebd_water__c3_w150_h100,
+        f1d4b1639e810f0481ec6d753441afd3_water__c3_w150_h100,
+        f373c212a6e476f1d90d18a2cbf394_water__c3_w150_h100,
+        ab3b9b3f8bab83394d902e9e726e5d67_water__c3_w150_h100,
+        fcc22976921b715eb71fa7d49ba84a_water__c3_w150_h100,
+    ];
 
     return (
         <>
             <Header></Header>
+            <MobileHeader></MobileHeader>
             <div id="layout_body" class="layout_sub">
                 <Header2></Header2>
                 <div id="container">
@@ -237,7 +354,7 @@ const Sub03_2 = () => {
                                 </ul>
                             </div>
 
-                            <div class="center_slide">
+                            {/* <div class="center_slide">
                                 <div>
                                     <div id="bx-slider">
                                         <ul class="bxslider">
@@ -540,6 +657,311 @@ const Sub03_2 = () => {
                                                 </div>
                                             </li>
                                         </ul>
+                                    </div>
+                                </div>
+                            </div> */}
+                            {/* <div className="center_slide">
+                                <div>
+                                    <Slider {...settings} asNavFor={nav2} ref={(slider1) => setNav1(slider1)}>
+                                        {images.map((src, index) => (
+                                            <div key={index}>
+                                                <Image src={src} alt="" width={800} height={600} layout="responsive" />
+                                            </div>
+                                        ))}
+                                        <div>
+                                            <Image src={bg_movie} alt="" width={800} height={600} layout="responsive" />
+                                            <iframe
+                                                width="100%"
+                                                height="100%"
+                                                src="https://www.youtube.com/embed/h7NTnsnsjXU?version=2&autoplay=0&loop=1&showinfo=0&rel=0"
+                                                frameBorder="0"
+                                                allowFullScreen
+                                            ></iframe>
+                                        </div>
+                                    </Slider>
+
+                                    <Slider {...thumbnailSettings} asNavFor={nav1} ref={(slider2) => setNav2(slider2)}>
+                                        {images.map((src, index) => (
+                                            <div key={index}>
+                                                <Image src={src} alt="" width={150} height={100} layout="responsive" />
+                                            </div>
+                                        ))}
+                                        <div>
+                                            <div style={{ position: 'relative', overflow: 'hidden' }} className="ytb">
+                                                <Image
+                                                    src={bg_movie_thumb}
+                                                    alt=""
+                                                    width={150}
+                                                    height={100}
+                                                    layout="responsive"
+                                                />
+                                                <Image
+                                                    src="https://img.youtube.com/vi/h7NTnsnsjXU/0.jpg"
+                                                    alt=""
+                                                    layout="fill"
+                                                    objectFit="cover"
+                                                    style={{ position: 'absolute', left: 0, top: '-20%' }}
+                                                />
+                                            </div>
+                                        </div>
+                                    </Slider>
+                                </div>
+                            </div> */}
+                            {/* <div className="center_slide">
+                                <div>
+                                    <Slider {...settings} asNavFor={nav2} ref={(slider1) => setNav1(slider1)}>
+                                        {images.map((src, index) => (
+                                            <div key={index}>
+                                                <Image src={src} alt="" width={800} height={600} layout="responsive" />
+                                            </div>
+                                        ))}
+                                        <div>
+                                            <div style={{ position: 'relative', paddingTop: '56.25%' }}>
+                                                <iframe
+                                                    src="https://www.youtube.com/embed/h7NTnsnsjXU?version=2&autoplay=0&loop=1&showinfo=0&rel=0"
+                                                    frameBorder="0"
+                                                    allowFullScreen
+                                                    style={{
+                                                        position: 'absolute',
+                                                        top: 0,
+                                                        left: 0,
+                                                        width: '100%',
+                                                        height: '100%',
+                                                    }}
+                                                ></iframe>
+                                            </div>
+                                        </div>
+                                    </Slider>
+
+                                    <Slider {...thumbnailSettings} asNavFor={nav1} ref={(slider2) => setNav2(slider2)}>
+                                        {images.map((src, index) => (
+                                            <div key={index}>
+                                                <Image src={src} alt="" width={150} height={100} layout="responsive" />
+                                            </div>
+                                        ))}
+                                        <div>
+                                            <div
+                                                style={{
+                                                    position: 'relative',
+                                                    paddingTop: '56.25%',
+                                                    overflow: 'hidden',
+                                                }}
+                                                className="ytb"
+                                            >
+                                                <Image src={bg_movie_thumb} alt="" layout="fill" objectFit="cover" />
+                                                <div
+                                                    style={{
+                                                        position: 'absolute',
+                                                        top: 0,
+                                                        left: 0,
+                                                        width: '100%',
+                                                        height: '100%',
+                                                        backgroundImage:
+                                                            'url(https://img.youtube.com/vi/h7NTnsnsjXU/0.jpg)',
+                                                        backgroundSize: 'cover',
+                                                        backgroundPosition: 'center',
+                                                    }}
+                                                />
+                                            </div>
+                                        </div>
+                                    </Slider>
+                                </div>
+                            </div> */}
+                            {/* <div className="center_slide">
+                                <div id="bx-slider">
+                                    <Slider {...settings} asNavFor={nav2} ref={(slider1) => setNav1(slider1)}>
+                                        {images.map((src, index) => (
+                                            <div key={index}>
+                                                <Image src={src} alt="" width={788} height={450} layout="responsive" />
+                                            </div>
+                                        ))}
+                                        <div>
+                                            <div style={{ position: 'relative', paddingTop: '56.25%' }}>
+                                                <iframe
+                                                    src="https://www.youtube.com/embed/h7NTnsnsjXU?version=2&autoplay=0&loop=1&showinfo=0&rel=0"
+                                                    frameBorder="0"
+                                                    allowFullScreen
+                                                    style={{
+                                                        position: 'absolute',
+                                                        top: 0,
+                                                        left: 0,
+                                                        width: '100%',
+                                                        height: '100%',
+                                                    }}
+                                                ></iframe>
+                                            </div>
+                                        </div>
+                                    </Slider>
+                                </div>
+                                <div id="bx-pager">
+                                    <Slider {...thumbnailSettings} asNavFor={nav1} ref={(slider2) => setNav2(slider2)}>
+                                        {images.map((src, index) => (
+                                            <div key={index}>
+                                                <div>
+                                                    <a>
+                                                        <Image
+                                                            src={src}
+                                                            alt=""
+                                                            width={150}
+                                                            height={100}
+                                                            layout="responsive"
+                                                        />
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        ))}
+                                        <div>
+                                            <div>
+                                                <a className="ytb">
+                                                    <Image
+                                                        src={bg_movie_thumb}
+                                                        alt=""
+                                                        width={150}
+                                                        height={100}
+                                                        layout="responsive"
+                                                    />
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </Slider>
+                                    <div className="bx-controls">
+                                        <div className="bx-pager">1 / 5</div>
+                                        <div className="bx-controls-direction">
+                                            <a className="bx-prev">Prev</a>
+                                            <a className="bx-next">Next</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> */}
+                            {/* <div className="center_slide">
+                                <div id="bx-slider">
+                                    <Slider {...settings} asNavFor={nav2} ref={slider1Ref}>
+                                        {images.map((src, index) => (
+                                            <div key={index}>
+                                                <Image src={src} alt="" width={788} height={450} layout="responsive" />
+                                            </div>
+                                        ))}
+                                        <div>
+                                            <div style={{ position: 'relative', paddingTop: '56.25%' }}>
+                                                <iframe
+                                                    src="https://www.youtube.com/embed/h7NTnsnsjXU?version=2&autoplay=0&loop=1&showinfo=0&rel=0"
+                                                    frameBorder="0"
+                                                    allowFullScreen
+                                                    style={{
+                                                        position: 'absolute',
+                                                        top: 0,
+                                                        left: 0,
+                                                        width: '100%',
+                                                        height: '100%',
+                                                    }}
+                                                ></iframe>
+                                            </div>
+                                        </div>
+                                    </Slider>
+                                </div>
+                                <div id="bx-pager">
+                                    <Slider {...thumbnailSettings} asNavFor={nav1} ref={slider2Ref}>
+                                        {images.map((src, index) => (
+                                            <div key={index}>
+                                                <div>
+                                                    <a>
+                                                        <Image
+                                                            src={src}
+                                                            alt=""
+                                                            width={150}
+                                                            height={100}
+                                                            layout="responsive"
+                                                        />
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        ))}
+                                        <div>
+                                            <div>
+                                                <a className="ytb">
+                                                    <Image
+                                                        src={bg_movie_thumb}
+                                                        alt=""
+                                                        width={150}
+                                                        height={100}
+                                                        layout="responsive"
+                                                    />
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </Slider>
+                                    <div className="bx-controls">
+                                        <div className="bx-pager">1 / 5</div>
+                                        <div className="bx-controls-direction">
+                                            <a className="bx-prev">Prev</a>
+                                            <a className="bx-next">Next</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> */}
+                            <div className="center_slide">
+                                <div id="bx-slider">
+                                    <Slider {...settings} asNavFor={nav2} ref={(slider) => setNav1(slider)}>
+                                        {images.map((src, index) => (
+                                            <div key={index}>
+                                                <Image src={src} alt="" width={788} height={450} layout="responsive" />
+                                            </div>
+                                        ))}
+                                        <div>
+                                            <div style={{ position: 'relative', paddingTop: '56.25%' }}>
+                                                <iframe
+                                                    src="https://www.youtube.com/embed/h7NTnsnsjXU?version=2&autoplay=0&loop=1&showinfo=0&rel=0"
+                                                    frameBorder="0"
+                                                    allowFullScreen
+                                                    style={{
+                                                        position: 'absolute',
+                                                        top: 0,
+                                                        left: 0,
+                                                        width: '100%',
+                                                        height: '100%',
+                                                    }}
+                                                ></iframe>
+                                            </div>
+                                        </div>
+                                    </Slider>
+                                </div>
+                                <div id="bx-pager">
+                                    <Slider {...thumbnailSettings} asNavFor={nav1} ref={(slider) => setNav2(slider)}>
+                                        {images.map((src, index) => (
+                                            <div key={index}>
+                                                <div>
+                                                    <a>
+                                                        <Image
+                                                            src={src}
+                                                            alt=""
+                                                            width={150}
+                                                            height={100}
+                                                            layout="responsive"
+                                                        />
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        ))}
+                                        <div>
+                                            <div>
+                                                <a className="ytb">
+                                                    <Image
+                                                        src={bg_movie_thumb}
+                                                        alt=""
+                                                        width={150}
+                                                        height={100}
+                                                        layout="responsive"
+                                                    />
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </Slider>
+                                    <div className="bx-controls">
+                                        <div className="bx-pager">1 / 5</div>
+                                        <div className="bx-controls-direction">
+                                            <a className="bx-prev">Prev</a>
+                                            <a className="bx-next">Next</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

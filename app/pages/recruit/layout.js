@@ -2,7 +2,7 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <head>
-                <title>sitemap 01</title>
+                <title>채용시스템</title>
             </head>
             <body>{children}</body>
         </html>

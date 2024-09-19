@@ -2,19 +2,18 @@
 import { useState } from 'react';
 import btn_sitemap_close from '../public/design/images/sub/btn_sitemap_close.png';
 import { useRecoilState } from 'recoil';
-import { headerPopupState } from '../layout';
+import { headerPopupState, mobileHeaderPopupState } from '../layout';
 
 const Header = () => {
     const [menuState, setmenuState] = useRecoilState(headerPopupState);
-
+    const [mobileMenuState, setMobileMenuState] = useRecoilState(mobileHeaderPopupState);
     const clickMenu = () => {
         console.log('메뉴 변경');
         setmenuState((menuState) => !menuState);
     };
-
     return (
         <div id="sitemap" className={menuState ? 'on' : null}>
-            <div className="wrap">
+            <div className="wrap" class={mobileMenuState ? 'on' : null}>
                 <a href="#" id="btnSitemapCl" onClick={() => clickMenu()}>
                     <img src={btn_sitemap_close.src} alt="닫기" />
                 </a>

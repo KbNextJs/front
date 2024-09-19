@@ -22,11 +22,13 @@ import sub02_2_7 from '../../public/design/images/sub/sub02_2_7.jpg';
 import Header2 from '@/app/component/Header2';
 import family_tit from '../../public/design/images/skin/family_tit.png';
 import Footer from '@/app/component/footer';
+import MobileHeader from '@/app/component/mobileHeader';
 
-const Sub02_3 = () => {
+const Sub02_3 = () => { // 완성
     return (
         <>
             <Header></Header>
+            <MobileHeader></MobileHeader>
             <div id="layout_body" className="layout_sub">
                 <Header2></Header2>
                 <div id="container">
