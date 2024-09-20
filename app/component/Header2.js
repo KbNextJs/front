@@ -34,7 +34,7 @@ const Header2 = () => {
         <div id="header" className="header_sub">
             <div className="wrap h_wrap">
                 <h1>
-                    <a href="../main.html">
+                    <a href="/">
                         <img src={kb_logo_sub.src} alt="KB골든라이프" />
                     </a>
                     <a href="#" onClick={() => clickMobileMenu()} id="btn_mobile_gnb">
@@ -44,26 +44,26 @@ const Header2 = () => {
                 <div className="gnb gnb_sub">
                     <ul className="dep1">
                         <li className="dep1_item">
-                            <a href="sub1_1_1.html"> 회사소개 </a>
+                            <a> 회사소개 </a>
                             <div className="dep2_0">
                                 <ul className="dep2">
                                     <li>
-                                        <a href="sub1_1_2.html">CEO 인사말</a>
+                                        <a>CEO 인사말</a>
                                     </li>
                                     <li>
-                                        <a href="sub1_1_1.html">비전체계</a>
+                                        <a>비전체계</a>
                                     </li>
                                     <li>
-                                        <a href="../bbs/sub1_4.html">공지/공시</a>
+                                        <a>공지/공시</a>
                                     </li>
                                     <li>
-                                        <a href="sub1_1_3.html">오시는 길</a>
+                                        <a>오시는 길</a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
                         <li className="dep1_item">
-                            <a href="http://pyeongchang-county.com/" target="_blank">
+                            <a target="_blank">
                                 평창카운티<span>노인복지주택</span>
                             </a>
                             <div className="dep2_1">
@@ -71,22 +71,22 @@ const Header2 = () => {
                             </div>
                         </li>
                         <li className="dep1_item">
-                            <a href="sub02_1.html" className="on">
+                            <a href="/pages/sub02_1" className="on">
                                 {' '}
                                 위례 빌리지<span>요양시설</span>{' '}
                             </a>
                             <div className="dep2_2">
                                 <ul className="dep2">
                                     <li>
-                                        <a href="sub02_1.html" className="on">
+                                        <a href="/pages/sub02_1" className="on">
                                             위례빌리지 소개
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="sub02_3.html">서비스·시설 안내</a>
+                                        <a href="/pages/sub02_3">서비스·시설 안내</a>
                                     </li>
                                     <li>
-                                        <a href="sub02_4.html">입소안내ㆍ접수</a>
+                                        <a href="/pages/sub02_4">입소안내ㆍ접수</a>
                                     </li>
                                 </ul>
                             </div>
@@ -111,17 +111,17 @@ const Header2 = () => {
                             </div>
                         </li>
                         <li className="dep1_item">
-                            <a href="sub03_1.html">
+                            <a href="/pages/sub03_1">
                                 {' '}
                                 케어센터<span>주.야간보호센터</span>{' '}
                             </a>
                             <div className="dep2_4">
                                 <ul className="dep2">
                                     <li>
-                                        <a href="sub03_1.html">서비스 소개</a>
+                                        <a href="/pages/sub03_1">서비스 소개</a>
                                     </li>
                                     <li>
-                                        <a href="sub03_2.html">강동케어센터 소개</a>
+                                        <a href="/pages/sub03_2">강동케어센터 소개</a>
                                     </li>
                                     <li>
                                         <a href="sub03_3.html">위례케어센터 소개</a>
@@ -130,42 +130,42 @@ const Header2 = () => {
                             </div>
                         </li>
                         <li className="dep1_item">
-                            <a href="sub1_3_1.html"> 인재채용 </a>
+                            <a href="/pages/sub1_3_1"> 인재채용 </a>
                             <div className="dep2_5">
                                 <ul className="dep2">
                                     <li>
-                                        <a href="sub1_3_1.html">인재상</a>
+                                        <a href="/pages/sub1_3_1">인재상</a>
                                     </li>
                                     <li>
-                                        <a href="sub1_3_2.html">직무소개</a>
+                                        <a href="/pages/sub1_3_2">직무소개</a>
                                     </li>
                                     <li>
-                                        <a href="https://admin.kbgoldenlifecare.co.kr/recruit/main">채용공고</a>
+                                        <a href="/pages/recruit">채용공고</a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
                         <li className="dep1_item">
-                            <a href="../bbs/sub05_1.html"> 게시판 </a>
+                            <a href="/pages/bbs"> 게시판 </a>
                             <div className="dep2_6">
                                 <ul className="dep2">
                                     <li>
-                                        <a href="../myreg/sub05_6.html">개소 예정 사업장 안내</a>
+                                        <a href="/pages/myreg">개소 예정 사업장 안내</a>
                                     </li>
                                     <li>
-                                        <a href="../bbs/sub05_1.html">프로그램/식단표</a>
+                                        <a href="/pages/bbs">프로그램/식단표</a>
                                     </li>
                                     <li>
-                                        <a href="sub1_2_1.html">자원봉사안내</a>
+                                        <a href="/pages/sub1_2_1">자원봉사안내</a>
                                     </li>
                                     <li>
                                         <a href="sub05_3.html">견학안내</a>
                                     </li>
                                     <li>
-                                        <a href="../bbs/sub2_3_1.html">상담신청</a>
+                                        <a href="/pages/sub2_3_1">상담신청</a>
                                     </li>
                                     <li>
-                                        <a href="bl_go.html">고객의 소리</a>
+                                        <a href="/pages/bl_go">고객의 소리</a>
                                     </li>
                                 </ul>
                             </div>
