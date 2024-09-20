@@ -4,12 +4,19 @@ import { headerPopupState, mobileHeaderPopupState } from '../layout';
 import kb_logo_sub from '../public/design/images/skin/kb_logo_sub.png';
 import mobile_btn from '../public/design/images/skin/mobile_btn.png';
 import ico_sitemap from '../public/design/images/skin/ico_sitemap.png';
+import '../../cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css';
+import '../public/src_css/c_slides.css';
+import '../public/src_css/a_reset.css';
+import '../public/src_css/fonts.css';
+import '../public/src_css/b_style.css';
+import '../public/src_css/ds_style.css';
 const Header2 = () => {
     const [menuState, setmenuState] = useRecoilState(headerPopupState);
     const [mobileMenuState, setMobileMenuState] = useRecoilState(mobileHeaderPopupState);
 
-    const clickMenu = () => {
-        console.log('메뉴 변경');
+    const clickMenu = (e) => {
+        console.log('메뉴 변경', menuState, mobileMenuState);
+        e.preventDefault();
         setmenuState((menuState) => !menuState);
     };
     const clickMobileMenu = () => {
@@ -37,7 +44,7 @@ const Header2 = () => {
                     <a href="/">
                         <img src={kb_logo_sub.src} alt="KB골든라이프" />
                     </a>
-                    <a href="#" onClick={() => clickMobileMenu()} id="btn_mobile_gnb">
+                    <a href="#" onClick={clickMobileMenu} id="btn_mobile_gnb">
                         <img src={mobile_btn.src} alt="mobile_button" />
                     </a>
                 </h1>
@@ -181,7 +188,7 @@ const Header2 = () => {
                             </div>
                         </li>
                         <li>
-                            <a href="#" id="btnSitemap" onClick={() => clickMenu()}>
+                            <a href="#" id="btnSitemap" onClick={(e) => clickMenu(e)}>
                                 <img src={ico_sitemap.src} alt="사이트맵" />
                             </a>
                         </li>

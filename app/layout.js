@@ -10,10 +10,14 @@ export const headerPopupState = atom({
 });
 
 export const mobileHeaderPopupState = atom({
-    key: 'headerPopupState', // unique ID (with respect to other atoms/selectors)
+    key: 'mobileHeaderPopupState', // unique ID (with respect to other atoms/selectors)
     default: false, // default value (aka initial value)
 });
 
+// export const mobileHeaderPopupStateAside = atom({
+//     key: 'mobileHeaderPopupStateAside', // unique ID (with respect to other atoms/selectors)
+//     default: [false, false, false, false, false, false, false], // default value (aka initial value)
+// });
 export default function RootLayout({ children }) {
     return (
         <RecoilRoot>

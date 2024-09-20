@@ -1,6 +1,8 @@
 'use client';
 import Image from 'next/image';
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+
 import './css/main.css';
 import './public/src_css/c_slides.css';
 import './public/src_css/a_reset.css';
@@ -8,6 +10,20 @@ import './public/src_css/fonts.css';
 import './public/src_css/b_style.css';
 import './public/src_css/ds_style.css';
 import './css/jquery.bxslider.css';
+import './css/slider.css';
+
+import kb_logo_sub from './public/design/images/skin/kb_logo_sub.png';
+import mobile_btn from './public/design/images/skin/mobile_btn.png';
+import ico_sitemap from './public/design/images/skin/ico_sitemap.png';
+
+const images = [
+    jeong1700617901.src,
+    il1563155780.src,
+    main_txt021487582982.src,
+    mobile_slide021487760659.src,
+    main_txt031488505989.src,
+    mobile_slide031488505989.src,
+];
 
 import Header from './component/header';
 import Header2 from './component/Header2';
@@ -24,17 +40,217 @@ import mobile_slide031488505989 from './public/design/my_xml/mobile_slide0314885
 import ico_bbs_more from './public/design/images/main/ico_bbs_more.gif';
 import c1_w540_h147 from './thum_img/kbgoldenlife/my_xml/908c2c1867fd4c0d1bdedfd9c7bd34bd_water__c1_w540_h147.png';
 import MobileHeader from './component/mobileHeader';
+import { useRecoilState } from 'recoil';
+import { headerPopupState, mobileHeaderPopupState } from './layout';
 
 export default function Home() {
+    const [menuState, setmenuState] = useRecoilState(headerPopupState);
+    const [mobileMenuState, setMobileMenuState] = useRecoilState(mobileHeaderPopupState);
+
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+        }, 5000);
+
+        return () => clearInterval(interval);
+    }, []);
+
+    const goToPrevious = () => {
+        setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+    };
+
+    const goToNext = () => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    };
+
+    const goToIndex = (index) => {
+        setCurrentIndex(index);
+    };
+
+    const clickMenu = () => {
+        console.log('메뉴 변경');
+        setmenuState((menuState) => !menuState);
+    };
+    const clickMobileMenu = () => {
+        console.log('모바일 메뉴 변경');
+        const htmlTag = document.querySelector('html');
+        const bodyTag = document.querySelector('body');
+        if (mobileMenuState) {
+            htmlTag.style.height = 'auto';
+            htmlTag.style.overflow = 'visible';
+            bodyTag.style.height = 'auto';
+            bodyTag.style.overflow = 'visible';
+        } else {
+            htmlTag.style.height = '1047px';
+            htmlTag.style.overflow = 'hidden';
+            bodyTag.style.height = '1047px';
+            bodyTag.style.overflow = 'hidden';
+        }
+        setMobileMenuState((mobileMenuState) => !mobileMenuState);
+    };
     return (
         <>
             <Header></Header>
             <MobileHeader></MobileHeader>
             <div id="layout_body" className="layout_main">
-                <Header2></Header2>
+                <div id="header" class="header_main">
+                    <div class="wrap h_wrap">
+                        <h1>
+                            <a href="main">
+                                <img src={kb_logo_sub.src} alt="KB골든라이프" />
+                            </a>
+                            <a href="#" id="btn_mobile_gnb" onClick={clickMobileMenu}>
+                                <img src={mobile_btn.src} alt="mobile_button" />
+                            </a>
+                        </h1>
+                        <div class="gnb gnb_main">
+                            <ul class="dep1">
+                                <li>
+                                    <a href="/pages/sub1_1_1">회사소개 </a>
+                                    <div>
+                                        <ul class="dep2">
+                                            <li>
+                                                <a href="/pages/sub1_1_2">CEO 인사말</a>
+                                            </li>{' '}
+                                            <li>
+                                                <a href="/pages/sub1_1_1">비전체계</a>
+                                            </li>{' '}
+                                            <li>
+                                                <a href="bbs/sub1_4">공지/공시</a>
+                                            </li>{' '}
+                                            <li>
+                                                <a href="/pages/sub1_1_3">오시는 길</a>
+                                            </li>{' '}
+                                        </ul>
+                                    </div>{' '}
+                                </li>
+                                <li>
+                                    <a href="http://pyeongchang-county.com/" target="_blank">
+                                        평창카운티<span>노인복지주택</span>{' '}
+                                    </a>
+                                    <div>
+                                        <ul class="dep2"></ul>
+                                    </div>{' '}
+                                </li>
+                                <li>
+                                    <a href="/pages/sub02_1">
+                                        위례 빌리지<span>요양시설</span>{' '}
+                                    </a>
+                                    <div>
+                                        <ul class="dep2">
+                                            <li>
+                                                <a href="/pages/sub02_1">위례빌리지 소개</a>
+                                            </li>{' '}
+                                            <li>
+                                                <a href="/pages/sub02_3">서비스·시설 안내</a>
+                                            </li>{' '}
+                                            <li>
+                                                <a href="/pages/sub02_4">입소안내ㆍ접수</a>
+                                            </li>{' '}
+                                        </ul>
+                                    </div>{' '}
+                                </li>
+                                <li>
+                                    <a href="/pages/Seocho_Dis">
+                                        서초 빌리지<span>요양시설</span>{' '}
+                                    </a>
+                                    <div>
+                                        <ul class="dep2">
+                                            <li>
+                                                <a href="/pages/Seocho_Dis">서초 빌리지 소개</a>
+                                            </li>{' '}
+                                            <li>
+                                                <a href="/pages/Seocho_sv">서초서비스·시설 안내</a>
+                                            </li>{' '}
+                                            <li>
+                                                <a href="/pages/Seocho_Rg">서초입소안내ㆍ접수</a>
+                                            </li>{' '}
+                                        </ul>
+                                    </div>{' '}
+                                </li>
+                                <li>
+                                    <a href="/pages/sub03_1">
+                                        케어센터<span>주.야간보호센터</span>{' '}
+                                    </a>
+                                    <div>
+                                        <ul class="dep2">
+                                            <li>
+                                                <a href="/pages/sub03_1">서비스 소개</a>
+                                            </li>{' '}
+                                            <li>
+                                                <a href="/pages/sub03_2">강동케어센터 소개</a>
+                                            </li>{' '}
+                                            <li>
+                                                <a href="/pages/sub03_3">위례케어센터 소개</a>
+                                            </li>{' '}
+                                        </ul>
+                                    </div>{' '}
+                                </li>
+                                <li>
+                                    <a href="/pages/sub1_3_1">인재채용 </a>
+                                    <div>
+                                        <ul class="dep2">
+                                            <li>
+                                                <a href="/pages/sub1_3_1">인재상</a>
+                                            </li>{' '}
+                                            <li>
+                                                <a href="/pages/sub1_3_2">직무소개</a>
+                                            </li>{' '}
+                                            <li>
+                                                <a href="https://admin.kbgoldenlifecare.co.kr/recruit/main">채용공고</a>
+                                            </li>{' '}
+                                        </ul>
+                                    </div>{' '}
+                                </li>
+                                <li>
+                                    <a href="bbs/sub05_1">게시판 </a>
+                                    <div>
+                                        <ul class="dep2">
+                                            <li>
+                                                <a href="myreg/sub05_6">개소 예정 사업장 안내</a>
+                                            </li>{' '}
+                                            <li>
+                                                <a href="bbs/sub05_1">프로그램/식단표</a>
+                                            </li>{' '}
+                                            <li>
+                                                <a href="/pages/sub1_2_1">자원봉사안내</a>
+                                            </li>{' '}
+                                            <li>
+                                                <a href="/pages/sub05_3">견학안내</a>
+                                            </li>{' '}
+                                            <li>
+                                                <a href="bbs/sub2_3_1">상담신청</a>
+                                            </li>{' '}
+                                            <li>
+                                                <a href="/pages/bl_go">고객의 소리</a>
+                                            </li>{' '}
+                                        </ul>
+                                    </div>{' '}
+                                </li>
+                                <li>
+                                    <a href="/pages/sub4_1">노인장기요양보험제도 </a>
+                                    <div>
+                                        <ul class="dep2">
+                                            <li>
+                                                <a href="/pages/sub4_1">노인장기요양보험제도</a>
+                                            </li>{' '}
+                                        </ul>
+                                    </div>{' '}
+                                </li>
+                                <li>
+                                    <a href="#" id="btnSitemap" onClick={clickMenu}>
+                                        <img src={ico_sitemap.src} alt="사이트맵" />
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
                 <div id="main_visual">
                     <div id="flex_a0_mainvis" className="flex-container">
-                        <div className="flexslider">
+                        {/* <div className="flexslider">
                             <ul className="slides main_slides">
                                 <li className="item_0 item_h">
                                     <div className="wrap">
@@ -50,46 +266,46 @@ export default function Home() {
 
                                 <li className="item_1 item_e">
                                     <div className="wrap">
-                                        <a href="page/sub3_3.html"></a>
+                                        <a href="/pages/sub3_3"></a>
                                         <p>
                                             <img src="#" alt="" />
                                         </p>
                                     </div>
-                                    <a href="page/sub3_3.html" className="mo_slide_item">
+                                    <a href="/pages/sub3_3" className="mo_slide_item">
                                         <img src={il1563155780.src} alt="메인비주얼" />
                                     </a>
                                 </li>
 
                                 <li className="item_2 item_f">
                                     <div className="wrap">
-                                        <a href="page/Seocho_Rg.html"></a>
+                                        <a href="/pages/Seocho_Rg"></a>
                                         <p>
                                             <img src="#" alt="" />
                                         </p>
                                     </div>
-                                    <a href="page/Seocho_Rg.html" className="mo_slide_item"></a>
+                                    <a href="/pages/Seocho_Rg" className="mo_slide_item"></a>
                                 </li>
 
                                 <li className="item_3 item_b">
                                     <div className="wrap">
-                                        <a href="page/sub2_2_1.html"></a>
+                                        <a href="/pages/sub2_2_1"></a>
                                         <p>
                                             <img src={main_txt021487582982.src} alt="" />
                                         </p>
                                     </div>
-                                    <a href="page/sub2_2_1.html" className="mo_slide_item">
+                                    <a href="/pages/sub2_2_1" className="mo_slide_item">
                                         <img src={mobile_slide021487760659.src} alt="메인비주얼03" />
                                     </a>
                                 </li>
 
                                 <li className="item_4 item_g">
                                     <div className="wrap">
-                                        <a href="page/sub03_1.html"></a>
+                                        <a href="/pages/sub03_1"></a>
                                         <p>
                                             <img src="#" alt="" />
                                         </p>
                                     </div>
-                                    <a href="page/sub03_1.html" className="mo_slide_item"></a>
+                                    <a href="/pages/sub03_1" className="mo_slide_item"></a>
                                 </li>
 
                                 <li className="item_5 item_a">
@@ -104,6 +320,32 @@ export default function Home() {
                                     </a>
                                 </li>
                             </ul>
+                        </div> */}
+                        <div className="image-slider">
+                            {images.map((image, index) => (
+                                <div key={index} className={`slide ${index === currentIndex ? 'active' : ''}`}>
+                                    <img src={image} alt={`Slide ${index + 1}`} />
+                                </div>
+                            ))}
+
+                            <button onClick={goToPrevious} className="arrow arrow-left" aria-label="Previous slide">
+                                &lt;
+                            </button>
+
+                            <button onClick={goToNext} className="arrow arrow-right" aria-label="Next slide">
+                                &gt;
+                            </button>
+
+                            <div className="indicators">
+                                {images.map((_, index) => (
+                                    <button
+                                        key={index}
+                                        onClick={() => goToIndex(index)}
+                                        className={`indicator ${index === currentIndex ? 'active' : ''}`}
+                                        aria-label={`Go to slide ${index + 1}`}
+                                    />
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -124,7 +366,7 @@ export default function Home() {
                                     <li>
                                         <dl>
                                             <dt>
-                                                <a href="/page/sub02_4">
+                                                <a href="//pages/sub02_4">
                                                     <p>빌리지 입소안내</p>
                                                 </a>
                                             </dt>
@@ -133,7 +375,7 @@ export default function Home() {
                                     <li>
                                         <dl>
                                             <dt>
-                                                <a href="/page/sub03_1">
+                                                <a href="//pages/sub03_1">
                                                     <p>케어센터 이용안내</p>
                                                 </a>
                                             </dt>
@@ -308,7 +550,7 @@ export default function Home() {
                             <div className="wrap">
                                 <ul>
                                     <li className="item1">
-                                        <a className="inner" href="/page/sub1_1_1">
+                                        <a className="inner" href="//pages/sub1_1_1">
                                             <div className="dscr">
                                                 <h5>회사소개</h5>
                                                 <p>비전, 미션, 핵심가치를 소개 합니다.</p>
@@ -316,7 +558,7 @@ export default function Home() {
                                         </a>
                                     </li>
                                     <li className="item2">
-                                        <a className="inner" href="/page/sub1_2_1">
+                                        <a className="inner" href="//pages/sub1_2_1">
                                             <div className="dscr">
                                                 <h5>자원봉사</h5>
                                                 <p>KB골든라이프케어 자원봉사에 대해 소개합니다.</p>
@@ -324,7 +566,7 @@ export default function Home() {
                                         </a>
                                     </li>
                                     <li className="item3">
-                                        <a className="inner" href="/page/sub1_3_1">
+                                        <a className="inner" href="//pages/sub1_3_1">
                                             <div className="dscr">
                                                 <h5 className="mo_txt">인재상</h5>
                                                 <p>KB골든라이프가 추구하는 인재상</p>
