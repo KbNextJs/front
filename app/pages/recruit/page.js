@@ -8,6 +8,8 @@ import '../../public/src_css/b_style.css';
 import '../../public/src_css/ds_style.css';
 import '../../css/apply.css';
 import '../../css/select2.css';
+import { useRouter } from 'next/navigation';
+
 {
     /* <link media="all" type="text/css" rel="stylesheet" href="../css/apply.css">
 <link media="all" type="text/css" rel="stylesheet" href="../js/jquery-ui.css">
@@ -22,25 +24,28 @@ import family_tit from '../../public/design/images/skin/family_tit.png';
 import Footer from '@/app/component/footer';
 import Family_site from '@/app/component/family_site';
 
-const Recruit = () => { // 세부내용 추가 해야함
+const Recruit = () => {
+    // 세부내용 추가 해야함
     //https://admin.kbgoldenlifecare.co.kr/recruit/main
+    const router = useRouter();
+
     return (
         <>
             <div id="mobile-submenu">
-                <li onClick="location.href='main-2.html'">채용시스템 홈</li>
+                <li onClick={() => router.push('/pages/recruit')}>채용시스템 홈</li>
             </div>
             <div id="wrap">
                 <div id="grid_pos">
                     <div id="head">
                         <div id="header">
                             <div class="logo">
-                                <a href="http://www.kbgoldenlifecare.co.kr/">
+                                <a href="/">
                                     <img src={kb_logo_sub.src} width="442" height="52" />
                                 </a>
                             </div>
                             <div class="topm">
                                 <p>
-                                    <a href="main.html">채용시스템 홈</a>
+                                    <a href="/pages/recruit">채용시스템 홈</a>
                                 </p>
                             </div>
                         </div>
@@ -52,10 +57,10 @@ const Recruit = () => { // 세부내용 추가 해야함
                             <div class="apply_title">KB골든라이프케어 채용 시스템</div>
                             <div class="apply_toptxt fw">- 원하시는 메뉴를 선택해주세요.</div>
                             <div class="recruit_btn_pos">
-                                <div class="recruit_box" onClick="location.href='list.html'">
+                                <div class="recruit_box" onClick={() => router.push('/pages/recruit/list')}>
                                     <p>채용지원</p>
                                 </div>
-                                <div class="recruit_box" onClick="location.href='chk_rst.html'">
+                                <div class="recruit_box">
                                     <p>지원확인</p>
                                 </div>
                             </div>

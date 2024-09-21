@@ -116,7 +116,6 @@ body {
     color: #fcaf17;
 }
 #header .gnb .dep1 > li:hover > a {
-    
 }
 #header .gnb .dep1 > li > a {
     font-size: 17px;
@@ -2263,7 +2262,6 @@ body {
     background: #fcaf17 url(../design/images/skin/ico_btn_arr.png) 180px center;
     display: inline-block;
     zoom: 1;
-    display: inline;
     font-size: 16px;
     color: #fff;
     background-repeat: no-repeat;
@@ -2791,7 +2789,7 @@ body {
         padding-bottom: 0;
     }
     #main_visual:before {
-        display: none;
+        /* display: none; */
     }
     .main_con .sec1 .overcon {
         position: static;

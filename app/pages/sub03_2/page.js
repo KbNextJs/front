@@ -16,6 +16,8 @@ import '../../public/src_css/a_reset.css';
 import '../../public/src_css/fonts.css';
 import '../../public/src_css/b_style.css';
 import '../../public/src_css/ds_style.css';
+import '../../css/sub03_2.css';
+
 import sec03_2_1 from '../../public/design/images/sub/sec03_2_1.png';
 import ct_name from '../../public/design/images/sub/ct_name.jpg';
 import mission_icon from '../../public/design/images/ds_img/mission_icon.png';
@@ -354,312 +356,367 @@ const Sub03_2 = () => {
                                 </ul>
                             </div>
 
-                            {/* <div class="center_slide">
+                            <div class="center_slide">
                                 <div>
                                     <div id="bx-slider">
-                                        <ul class="bxslider">
-                                            <li>
-                                                <a>
-                                                    <img src={care_center011490590851.src} alt="" />
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a>
-                                                    <img src={bg_movie.src} />
-                                                    <iframe
-                                                        width="100%"
-                                                        height="100%"
-                                                        src="https://www.youtube.com/embed/h7NTnsnsjXU?version=2&amp;autoplay=0&amp;loop=1&amp;showinfo=0&amp;rel=0"
-                                                        frameborder="0"
-                                                        allowfullscreen
-                                                    ></iframe>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a>
-                                                    <img src={kbeoteo.src} alt="" />
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a>
-                                                    <img src={chang51487591213.src} alt="" />
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a>
-                                                    <img src={kbeoteo071487586141.src} alt="" />
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a>
-                                                    <img src={kbeoteo091487586131.src} alt="" />
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a>
-                                                    <img src={my_xml0114875861491487925776.src} alt="" />
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a>
-                                                    <img src={kbeoteo101487586126.src} alt="" />
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a>
-                                                    <img src={kbeoteo131487586122.src} alt="" />
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a>
-                                                    <img src={kbeoteo141487586117.src} alt="" />
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a>
-                                                    <img src={kbeoteo161487586111.src} alt="" />
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a>
-                                                    <img src={kbeoteo171487586106.src} alt="" />
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a>
-                                                    <img src={kbeoteo191487586092.src} alt="" />
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a>
-                                                    <img src={kbeoteo231487586087.src} alt="" />
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a>
-                                                    <img src={kbeoteo291487586082.src} alt="" />
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a>
-                                                    <img src={kbeoteo321487586077.src} alt="" />
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a>
-                                                    <img src={kbeoteo331487586073.src} alt="" />
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a>
-                                                    <img src={kb_center1487593553.src} alt="" />
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a>
-                                                    <img src={kbeoteo371487586064.src} alt="" />
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a>
-                                                    <img src={kbeoteo381487586058.src} alt="" />
-                                                </a>
-                                            </li>
-                                        </ul>
+                                        <div class="bx-wrapper">
+                                            <div
+                                                class="bx-viewport"
+                                                style={{
+                                                    width: '100%',
+                                                    overflow: 'hidden',
+                                                    position: 'relative',
+                                                    height: '422px',
+                                                }}
+                                            >
+                                                <ul class="bxslider">
+                                                    {' '}
+                                                    {/* width: 20215%; position: relative; transition-duration: 0s; transform: translate3d(-1892.98px, 0px, 0px); */}
+                                                    <li>
+                                                        <a>
+                                                            <img src={care_center011490590851.src} alt="" />
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a>
+                                                            <img src={bg_movie.src} />
+                                                            <iframe
+                                                                width="100%"
+                                                                height="100%"
+                                                                src="https://www.youtube.com/embed/h7NTnsnsjXU?version=2&amp;autoplay=0&amp;loop=1&amp;showinfo=0&amp;rel=0"
+                                                                frameborder="0"
+                                                                allowfullscreen
+                                                            ></iframe>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a>
+                                                            <img src={kbeoteo.src} alt="" />
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a>
+                                                            <img src={chang51487591213.src} alt="" />
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a>
+                                                            <img src={kbeoteo071487586141.src} alt="" />
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a>
+                                                            <img src={kbeoteo091487586131.src} alt="" />
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a>
+                                                            <img src={my_xml0114875861491487925776.src} alt="" />
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a>
+                                                            <img src={kbeoteo101487586126.src} alt="" />
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a>
+                                                            <img src={kbeoteo131487586122.src} alt="" />
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a>
+                                                            <img src={kbeoteo141487586117.src} alt="" />
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a>
+                                                            <img src={kbeoteo161487586111.src} alt="" />
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a>
+                                                            <img src={kbeoteo171487586106.src} alt="" />
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a>
+                                                            <img src={kbeoteo191487586092.src} alt="" />
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a>
+                                                            <img src={kbeoteo231487586087.src} alt="" />
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a>
+                                                            <img src={kbeoteo291487586082.src} alt="" />
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a>
+                                                            <img src={kbeoteo321487586077.src} alt="" />
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a>
+                                                            <img src={kbeoteo331487586073.src} alt="" />
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a>
+                                                            <img src={kb_center1487593553.src} alt="" />
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a>
+                                                            <img src={kbeoteo371487586064.src} alt="" />
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a>
+                                                            <img src={kbeoteo381487586058.src} alt="" />
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="bx-controls bx-has-controls-direction">
+                                                <div class="bx-controls-direction">
+                                                    <a class="bx-prev">Prev</a>
+                                                    <a class="bx-next">Next</a>
+                                                </div>
+                                                <div class="bx-pager bx-default-pager"></div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div id="bx-pager">
-                                        <ul>
-                                            <li>
-                                                <div>
-                                                    <a data-slide-index="0" href="#">
-                                                        <img src={water__c3_w150_h100.src} alt="" />
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a data-slide-index="1" href="#">
-                                                        <div class="ytb position_relative_overflow_hidden">
-                                                            <img src={bg_movie_thumb.src} />
-                                                            <img
-                                                                src="../../img.youtube.com/vi/h7NTnsnsjXU/0.jpg"
-                                                                alt=""
-                                                                class="position_absolute_left_0_top_20_width_100_height_140"
-                                                            />
+                                    <div id="bx-pager" style={{ visibility: 'visible' }}>
+                                        <div class="bx-wrapper" style={{ maxWidth: '100%' }}>
+                                            <div
+                                                class="bx-viewport"
+                                                aria-live="polite"
+                                                style={{
+                                                    width: '100%',
+                                                    overflow: 'hidden',
+                                                    position: 'relative',
+                                                    height: '170px',
+                                                }}
+                                            >
+                                                <ul>
+                                                    <li aria-hidden="false">
+                                                        <div>
+                                                            <a data-slide-index="0" href="#">
+                                                                <img src={water__c3_w150_h100.src} alt="" />
+                                                            </a>
                                                         </div>
-                                                    </a>
+                                                        <div>
+                                                            <a data-slide-index="1" href="#">
+                                                                <div class="ytb position_relative_overflow_hidden">
+                                                                    <img src={bg_movie_thumb.src} />
+                                                                    <img
+                                                                        src="../../img.youtube.com/vi/h7NTnsnsjXU/0.jpg"
+                                                                        alt=""
+                                                                        class="position_absolute_left_0_top_20_width_100_height_140"
+                                                                    />
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div>
+                                                            <a data-slide-index="2" href="#">
+                                                                <img
+                                                                    src={
+                                                                        ffb21d171dae64c49fe712adee982_water__c3_w150_h100.src
+                                                                    }
+                                                                    alt=""
+                                                                />
+                                                            </a>
+                                                        </div>
+                                                        <div>
+                                                            <a data-slide-index="3" href="#">
+                                                                <img
+                                                                    src={
+                                                                        f8aae39e1d68f31b968a2b2320e835a_water__c3_w150_h100.src
+                                                                    }
+                                                                    alt=""
+                                                                />
+                                                            </a>
+                                                        </div>
+                                                        <div>
+                                                            <a data-slide-index="4" href="#">
+                                                                <img
+                                                                    src={
+                                                                        c1d799063601f53a5b7e075189c432_water__c3_w150_h100.src
+                                                                    }
+                                                                    alt=""
+                                                                />
+                                                            </a>
+                                                        </div>
+                                                        <div>
+                                                            <a data-slide-index="5" href="#">
+                                                                <img
+                                                                    src={
+                                                                        ccad6879ffe531cf38a51fc8598e3d5d_water__c3_w150_h100.src
+                                                                    }
+                                                                    alt=""
+                                                                />
+                                                            </a>
+                                                        </div>
+                                                        <div>
+                                                            <a data-slide-index="6" href="#">
+                                                                <img
+                                                                    src={
+                                                                        ee4953a26b32396d6b89e3f950418429_water__c3_w150_h100.src
+                                                                    }
+                                                                    alt=""
+                                                                />
+                                                            </a>
+                                                        </div>
+                                                        <div>
+                                                            <a data-slide-index="7" href="#">
+                                                                <img
+                                                                    src={
+                                                                        a7b894f6d896c329abd88de25d627e3d_water__c3_w150_h100.src
+                                                                    }
+                                                                    alt=""
+                                                                />
+                                                            </a>
+                                                        </div>
+                                                        <div>
+                                                            <a data-slide-index="8" href="#">
+                                                                <img
+                                                                    src={
+                                                                        e8c430b3d784ec56e9de4fd6ff55cce_water__c3_w150_h100.src
+                                                                    }
+                                                                    alt=""
+                                                                />
+                                                            </a>
+                                                        </div>
+                                                        <div>
+                                                            <a data-slide-index="9" href="#">
+                                                                <img
+                                                                    src={
+                                                                        f788547e7661b4b6cd6078ed4f96e0ad_water__c3_w150_h100.src
+                                                                    }
+                                                                    alt=""
+                                                                />
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                    <li aria-hidden="true">
+                                                        <div>
+                                                            <a data-slide-index="10" href="#">
+                                                                <img
+                                                                    src={
+                                                                        ae285fb8b7c09ad7e0b1e1fbf1cf0f_water__c3_w150_h100.src
+                                                                    }
+                                                                    alt=""
+                                                                />
+                                                            </a>
+                                                        </div>
+                                                        <div>
+                                                            <a data-slide-index="11" href="#">
+                                                                <img
+                                                                    src={
+                                                                        fcc22976921b715eb71fa7d49ba84a_water__c3_w150_h100.src
+                                                                    }
+                                                                    alt=""
+                                                                />
+                                                            </a>
+                                                        </div>
+                                                        <div>
+                                                            <a data-slide-index="12" href="#">
+                                                                <img
+                                                                    src={
+                                                                        bece32e9736dbf4a55581ccfca442_water__c3_w150_h100.src
+                                                                    }
+                                                                    alt=""
+                                                                />
+                                                            </a>
+                                                        </div>
+                                                        <div>
+                                                            <a data-slide-index="13" href="#">
+                                                                <img
+                                                                    src={
+                                                                        b84572725816ae2d779fc4e19d99be9a_water__c3_w150_h100.src
+                                                                    }
+                                                                    alt=""
+                                                                />
+                                                            </a>
+                                                        </div>
+                                                        <div>
+                                                            <a data-slide-index="14" href="#">
+                                                                <img
+                                                                    src={
+                                                                        ee94749637822d0ce48819c9d524ebe6_water__c3_w150_h100.src
+                                                                    }
+                                                                    alt=""
+                                                                />
+                                                            </a>
+                                                        </div>
+                                                        <div>
+                                                            <a data-slide-index="15" href="#">
+                                                                <img
+                                                                    src={
+                                                                        d20f77ff830c2b6464cf53afce7c5a65_water__c3_w150_h100.src
+                                                                    }
+                                                                    alt=""
+                                                                />
+                                                            </a>
+                                                        </div>
+                                                        <div>
+                                                            <a data-slide-index="16" href="#">
+                                                                <img
+                                                                    src={
+                                                                        ac0b7db0c7c23da4ff1f501687ebd_water__c3_w150_h100.src
+                                                                    }
+                                                                    alt=""
+                                                                />
+                                                            </a>
+                                                        </div>
+                                                        <div>
+                                                            <a data-slide-index="17" href="#">
+                                                                <img
+                                                                    src={
+                                                                        f1d4b1639e810f0481ec6d753441afd3_water__c3_w150_h100.src
+                                                                    }
+                                                                    alt=""
+                                                                />
+                                                            </a>
+                                                        </div>
+                                                        <div>
+                                                            <a data-slide-index="18" href="#">
+                                                                <img
+                                                                    src={
+                                                                        f373c212a6e476f1d90d18a2cbf394_water__c3_w150_h100.src
+                                                                    }
+                                                                    alt=""
+                                                                />
+                                                            </a>
+                                                        </div>
+                                                        <div>
+                                                            <a data-slide-index="19" href="#">
+                                                                <img
+                                                                    src={
+                                                                        ab3b9b3f8bab83394d902e9e726e5d67_water__c3_w150_h100.src
+                                                                    }
+                                                                    alt=""
+                                                                />
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="bx-controls bx-has-controls-direction bx-has-pager">
+                                                <div class="bx-controls-direction">
+                                                    <a class="bx-prev">Prev</a>
+                                                    <a class="bx-next">Next</a>
                                                 </div>
-                                                <div>
-                                                    <a data-slide-index="2" href="#">
-                                                        <img
-                                                            src={ffb21d171dae64c49fe712adee982_water__c3_w150_h100.src}
-                                                            alt=""
-                                                        />
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a data-slide-index="3" href="#">
-                                                        <img
-                                                            src={
-                                                                f8aae39e1d68f31b968a2b2320e835a_water__c3_w150_h100.src
-                                                            }
-                                                            alt=""
-                                                        />
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a data-slide-index="4" href="#">
-                                                        <img
-                                                            src={c1d799063601f53a5b7e075189c432_water__c3_w150_h100.src}
-                                                            alt=""
-                                                        />
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a data-slide-index="5" href="#">
-                                                        <img
-                                                            src={
-                                                                ccad6879ffe531cf38a51fc8598e3d5d_water__c3_w150_h100.src
-                                                            }
-                                                            alt=""
-                                                        />
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a data-slide-index="6" href="#">
-                                                        <img
-                                                            src={
-                                                                ee4953a26b32396d6b89e3f950418429_water__c3_w150_h100.src
-                                                            }
-                                                            alt=""
-                                                        />
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a data-slide-index="7" href="#">
-                                                        <img
-                                                            src={
-                                                                a7b894f6d896c329abd88de25d627e3d_water__c3_w150_h100.src
-                                                            }
-                                                            alt=""
-                                                        />
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a data-slide-index="8" href="#">
-                                                        <img
-                                                            src={
-                                                                e8c430b3d784ec56e9de4fd6ff55cce_water__c3_w150_h100.src
-                                                            }
-                                                            alt=""
-                                                        />
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a data-slide-index="9" href="#">
-                                                        <img
-                                                            src={
-                                                                f788547e7661b4b6cd6078ed4f96e0ad_water__c3_w150_h100.src
-                                                            }
-                                                            alt=""
-                                                        />
-                                                    </a>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div>
-                                                    <a data-slide-index="10" href="#">
-                                                        <img
-                                                            src={ae285fb8b7c09ad7e0b1e1fbf1cf0f_water__c3_w150_h100.src}
-                                                            alt=""
-                                                        />
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a data-slide-index="11" href="#">
-                                                        <img
-                                                            src={fcc22976921b715eb71fa7d49ba84a_water__c3_w150_h100.src}
-                                                            alt=""
-                                                        />
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a data-slide-index="12" href="#">
-                                                        <img
-                                                            src={bece32e9736dbf4a55581ccfca442_water__c3_w150_h100.src}
-                                                            alt=""
-                                                        />
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a data-slide-index="13" href="#">
-                                                        <img
-                                                            src={
-                                                                b84572725816ae2d779fc4e19d99be9a_water__c3_w150_h100.src
-                                                            }
-                                                            alt=""
-                                                        />
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a data-slide-index="14" href="#">
-                                                        <img
-                                                            src={
-                                                                ee94749637822d0ce48819c9d524ebe6_water__c3_w150_h100.src
-                                                            }
-                                                            alt=""
-                                                        />
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a data-slide-index="15" href="#">
-                                                        <img
-                                                            src={
-                                                                d20f77ff830c2b6464cf53afce7c5a65_water__c3_w150_h100.src
-                                                            }
-                                                            alt=""
-                                                        />
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a data-slide-index="16" href="#">
-                                                        <img
-                                                            src={ac0b7db0c7c23da4ff1f501687ebd_water__c3_w150_h100.src}
-                                                            alt=""
-                                                        />
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a data-slide-index="17" href="#">
-                                                        <img
-                                                            src={
-                                                                f1d4b1639e810f0481ec6d753441afd3_water__c3_w150_h100.src
-                                                            }
-                                                            alt=""
-                                                        />
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a data-slide-index="18" href="#">
-                                                        <img
-                                                            src={f373c212a6e476f1d90d18a2cbf394_water__c3_w150_h100.src}
-                                                            alt=""
-                                                        />
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a data-slide-index="19" href="#">
-                                                        <img
-                                                            src={
-                                                                ab3b9b3f8bab83394d902e9e726e5d67_water__c3_w150_h100.src
-                                                            }
-                                                            alt=""
-                                                        />
-                                                    </a>
-                                                </div>
-                                            </li>
-                                        </ul>
+                                                <div class="bx-pager bx-default-pager">1/2</div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div> */}
+                            </div>
                             {/* <div className="center_slide">
                                 <div>
                                     <Slider {...settings} asNavFor={nav2} ref={(slider1) => setNav1(slider1)}>
@@ -899,7 +956,7 @@ const Sub03_2 = () => {
                                     </div>
                                 </div>
                             </div> */}
-                            <div className="center_slide">
+                            {/* <div className="center_slide">
                                 <div id="bx-slider">
                                     <Slider {...settings} asNavFor={nav2} ref={(slider) => setNav1(slider)}>
                                         {images.map((src, index) => (
@@ -964,7 +1021,8 @@ const Sub03_2 = () => {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
+
                             <div class="center_notice">
                                 <h2>센터 공지사항</h2>
                                 <div class="notice_list">

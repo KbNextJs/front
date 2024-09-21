@@ -1,7 +1,7 @@
 'use client';
-import Image from 'next/image';
 import React, { useState, useCallback, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import Image from 'next/image';
 
 import './css/main.css';
 import './public/src_css/c_slides.css';
@@ -24,6 +24,14 @@ const images = [
     main_txt031488505989.src,
     mobile_slide031488505989.src,
 ];
+// const images = [
+//     jeong1700617901,
+//     il1563155780,
+//     main_txt021487582982,
+//     mobile_slide021487760659,
+//     main_txt031488505989,
+//     mobile_slide031488505989,
+// ];
 
 import Header from './component/header';
 import Header2 from './component/Header2';
@@ -50,11 +58,10 @@ export default function Home() {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 5000);
-
-        return () => clearInterval(interval);
+        // const interval = setInterval(() => {
+        //     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+        // }, 5000);
+        // return () => clearInterval(interval);
     }, []);
 
     const goToPrevious = () => {
@@ -251,7 +258,7 @@ export default function Home() {
                 <div id="main_visual">
                     <div id="flex_a0_mainvis" className="flex-container">
                         {/* <div className="flexslider">
-                            <ul className="slides main_slides">
+                            <ul className="slides main_slides flex-active-slide">
                                 <li className="item_0 item_h">
                                     <div className="wrap">
                                         <a href="http://pyeongchang-county.com/" target="_blank"></a>
@@ -321,7 +328,7 @@ export default function Home() {
                                 </li>
                             </ul>
                         </div> */}
-                        <div className="image-slider">
+                        <div className="image-slider" style={{ height: window.innerWidth / 2 }}>
                             {images.map((image, index) => (
                                 <div key={index} className={`slide ${index === currentIndex ? 'active' : ''}`}>
                                     <img src={image} alt={`Slide ${index + 1}`} />
@@ -349,6 +356,87 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
+
+                {/* <div id="main_visual">
+                    <div id="flex_a0_mainvis" class="flex-container" style={{ width: 'auto' }}>
+                        <div class="flexslider">
+                            <div class="flex-viewport" style={{ overflow: 'hidden', position: 'relative' }}>
+                                <ul class="slides main_slides" style={{ width: '1600%', transitionDuration: '0s' }}>
+                                    <li class="item_0 item_h">
+                                        <div class="wrap">
+                                            <a href="http://pyeongchang-county.com/" target="_blank"></a>
+                                            <p>
+                                                <img src="" alt="" />
+                                            </p>
+                                        </div>
+                                        <a href="http://pyeongchang-county.com/" target="_blank" class="mo_slide_item">
+                                            <img src={jeong1700617901.src} alt="평창" />
+                                        </a>
+                                    </li>
+
+                                    <li class="item_1 item_e">
+                                        <div class="wrap">
+                                            <a href="http://www.kbgoldenlifecare.co.kr/page/sub3_3"></a>
+                                            <p>
+                                                <img src="" alt="" />
+                                            </p>
+                                        </div>
+                                        <a href="http://www.kbgoldenlifecare.co.kr/page/sub3_3" class="mo_slide_item">
+                                            <img src={il1563155780.src} alt="메인비주얼" />
+                                        </a>
+                                    </li>
+
+                                    <li class="item_2 item_f">
+                                        <div class="wrap">
+                                            <a href="https://www.kbgoldenlifecare.co.kr/page/Seocho_Rg"></a>
+                                            <p>
+                                                <img src="" alt="" />
+                                            </p>
+                                        </div>
+                                        <a
+                                            href="https://www.kbgoldenlifecare.co.kr/page/Seocho_Rg"
+                                            class="mo_slide_item"
+                                        ></a>
+                                    </li>
+
+                                    <li class="item_3 item_b">
+                                        <div class="wrap">
+                                            <a href="/page/sub2_2_1"></a>
+                                            <p>
+                                                <img src={main_txt021487582982.src} alt="" />
+                                            </p>
+                                        </div>
+                                        <a href="/page/sub2_2_1" class="mo_slide_item">
+                                            <img src={mobile_slide021487760659.src} alt="메인비주얼03" />
+                                        </a>
+                                    </li>
+
+                                    <li class="item_4 item_g">
+                                        <div class="wrap">
+                                            <a href="/page/sub03_1"></a>
+                                            <p>
+                                                <img src="" alt="" />
+                                            </p>
+                                        </div>
+                                        <a href="/page/sub03_1" class="mo_slide_item"></a>
+                                    </li>
+
+                                    <li class="item_5 item_a">
+                                        <div class="wrap">
+                                            <a href="#"></a>
+                                            <p>
+                                                <img src={main_txt031488505989.src} alt="" />
+                                            </p>
+                                        </div>
+                                        <a href="#" class="mo_slide_item">
+                                            <img src={mobile_slide031488505989.src} alt="메인비주얼02" />
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div> */}
                 <div id="container">
                     <div className="main_con">
                         <div className="section sec2">

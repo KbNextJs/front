@@ -19,12 +19,13 @@ import Footer from '@/app/component/footer';
 import Family_site from '@/app/component/family_site';
 import MobileHeader from '@/app/component/mobileHeader';
 
-const Bbs = () => {// 완성
+const Bbs = () => {
+    // 완성
     //https://www.kbgoldenlifecare.co.kr/bbs/sub05_1
     return (
         <>
             <Header></Header>
-            <MobileHeader/>
+            <MobileHeader />
             <div id="layout_body" class="layout_sub">
                 <Header2></Header2>
                 <div id="container">
@@ -37,6 +38,48 @@ const Bbs = () => {// 완성
                                         <p>
                                             <span>KB골든라이프케어 프로그램/식단표</span>
                                         </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hd_list">
+                                <div class="ui-toggle">
+                                    {/* <h1>카테고리</h1>
+                                    <p>
+                                        <span class="open">
+                                            열기<i class="ui-ico"></i>
+                                        </span>
+                                        <span class="close">
+                                            닫기<i class="ui-ico"></i>
+                                        </span>
+                                    </p> */}
+                                    <div class="bd">
+                                        <ul>
+                                            <li>
+                                                <a href="/bbs_shop/list.htm?me_popup=&board_code=sub05_1&cate_sub_idx=">
+                                                    <strong>전체(1453)</strong>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/bbs_shop/list.htm?me_popup=&board_code=sub05_1&cate_sub_idx=41079">
+                                                    위례빌리지(387)
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/bbs_shop/list.htm?me_popup=&board_code=sub05_1&cate_sub_idx=41080">
+                                                    강동케어센터(306)
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/bbs_shop/list.htm?me_popup=&board_code=sub05_1&cate_sub_idx=41081">
+                                                    위례케어센터(513)
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/bbs_shop/list.htm?me_popup=&board_code=sub05_1&cate_sub_idx=45385">
+                                                    서초 빌리지(246)
+                                                </a>
+                                            </li>{' '}
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
