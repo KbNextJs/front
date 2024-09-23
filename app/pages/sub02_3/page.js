@@ -24,7 +24,8 @@ import family_tit from '../../public/design/images/skin/family_tit.png';
 import Footer from '@/app/component/footer';
 import MobileHeader from '@/app/component/mobileHeader';
 
-const Sub02_3 = () => { // 완성
+const Sub02_3 = () => {
+    // 완성
     return (
         <>
             <Header></Header>
@@ -50,10 +51,10 @@ const Sub02_3 = () => { // 완성
                             <div className="tab_nav">
                                 <ul>
                                     <li className="on">
-                                        <a href="sub02_3.html">서비스 안내</a>
+                                        <a href="/pages/sub02_3">서비스 안내</a>
                                     </li>
                                     <li>
-                                        <a href="sub02_2.html">시설 안내</a>
+                                        <a href="/pages/sub02_2">시설 안내</a>
                                     </li>
                                 </ul>
                             </div>

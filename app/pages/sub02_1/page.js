@@ -20,7 +20,8 @@ import Header2 from '@/app/component/Header2';
 import Family_site from '@/app/component/family_site';
 import MobileHeader from '@/app/component/mobileHeader';
 
-export default function Sub02_1() { // 완성
+export default function Sub02_1() {
+    // 완성
     return (
         <>
             <Header></Header>

@@ -78,6 +78,24 @@ import Head from 'next/head';
 import MobileHeader from '@/app/component/mobileHeader';
 
 const Sub03_2 = () => {
+    const imgRef = useRef(null);
+    const [imgHeight, setImgHeight] = useState(null);
+    const sImgRef = useRef(null);
+    const [sImgHeight, setSImgHeight] = useState(null);
+    const [isClient, setIsClient] = useState(false);
+
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
+
+    useEffect(() => {
+        setImgHeight((imgHeight) => imgRef.current.offsetHeight);
+    }, [imgRef]);
+
+    useEffect(() => {
+        setSImgHeight((sImgHeight) => sImgRef.current.offsetHeight);
+    }, [sImgRef]);
+
     // 이미지 슬라이드 개발 남음
     // useEffect(() => {
     //     console.log('slider', slider);
@@ -366,9 +384,11 @@ const Sub03_2 = () => {
                                                     width: '100%',
                                                     overflow: 'hidden',
                                                     position: 'relative',
-                                                    height: '422px',
+                                                    height: imgHeight,
+                                                    // height: imgRef !== undefined ? imgRef.current.offsetHeight : 'auto',
                                                 }}
                                             >
+                                                {/* {console.log(imgRef.current.scrollHeight)} */}
                                                 <ul class="bxslider">
                                                     {' '}
                                                     {/* width: 20215%; position: relative; transition-duration: 0s; transform: translate3d(-1892.98px, 0px, 0px); */}
@@ -391,7 +411,7 @@ const Sub03_2 = () => {
                                                     </li>
                                                     <li>
                                                         <a>
-                                                            <img src={kbeoteo.src} alt="" />
+                                                            <img ref={imgRef} src={kbeoteo.src} alt="" />
                                                         </a>
                                                     </li>
                                                     <li>
@@ -495,18 +515,23 @@ const Sub03_2 = () => {
                                             <div
                                                 class="bx-viewport"
                                                 aria-live="polite"
-                                                style={{
-                                                    width: '100%',
-                                                    overflow: 'hidden',
-                                                    position: 'relative',
-                                                    height: '170px',
-                                                }}
+                                                style={
+                                                    isClient
+                                                        ? window.innerWidth > 1140
+                                                            ? { height: imgHeight }
+                                                            : { height: sImgHeight * 2 }
+                                                        : null
+                                                }
                                             >
                                                 <ul>
                                                     <li aria-hidden="false">
                                                         <div>
                                                             <a data-slide-index="0" href="#">
-                                                                <img src={water__c3_w150_h100.src} alt="" />
+                                                                <img
+                                                                    ref={sImgRef}
+                                                                    src={water__c3_w150_h100.src}
+                                                                    alt=""
+                                                                />
                                                             </a>
                                                         </div>
                                                         <div>

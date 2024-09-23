@@ -356,8 +356,7 @@
     margin: 110px 0 20px;
 }
 .center_notice h2 {
-    background: url(../public/design/images/sub/ico_notice.png) no-repeat
-        0 50%;
+    background: url(../public/design/images/sub/ico_notice.png) no-repeat 0 50%;
     text-indent: -9999px;
     position: absolute;
     left: 0;
@@ -536,8 +535,7 @@
     display: inline-block;
     width: 14px;
     height: 9px;
-    background: url(../public/design/images/sub/ico_arrow.png) no-repeat
-        center;
+    background: url(../public/design/images/sub/ico_arrow.png) no-repeat center;
     margin: 0 15px;
     background-size: 14px;
 }
@@ -584,6 +582,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
+    /* max-width: 100%; */
+    display: flex;
 }
 .orange li strong p {
     color: #5d5147;
@@ -602,16 +602,13 @@
     line-height: 1.5em;
 }
 .orange li:nth-child(1) .txt {
-    background: url('../public/design/images/sub/org_line.png') no-repeat
-        center / contain;
+    background: url('../public/design/images/sub/org_line.png') no-repeat center / contain;
 }
 .orange li:nth-child(2) .txt {
-    background: url('../public/design/images/sub/org_line.png') no-repeat
-        center / contain;
+    background: url('../public/design/images/sub/org_line.png') no-repeat center / contain;
 }
 .orange li:nth-child(3) .txt {
-    background: url('../public/design/images/sub/org_line.png') no-repeat
-        center / contain;
+    background: url('../public/design/images/sub/org_line.png') no-repeat center / contain;
 }
 .orange li p {
     color: #5d5147;

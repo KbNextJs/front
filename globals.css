@@ -882,7 +882,7 @@ body {
 
 .sub2_1 .sec2 .figure {
     position: absolute;
-    top: 46%;
+    top: 55%;
     left: 0;
     max-width: 50%;
     transform: translateY(-50%);
@@ -1164,7 +1164,7 @@ body {
     height: 195px;
     display: inline-block;
 }
-.orange li strong {
+/* .orange li strong {
     color: #fff;
     font-size: 22px;
     text-align: center;
@@ -1174,7 +1174,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-}
+} */
 .orange li strong span {
     display: block;
     font-weight: normal;
@@ -1381,7 +1381,7 @@ body {
         width: 100%;
         max-width: 100%;
         position: relative;
-        top: auto;
+        top: 55%;
         transform: translateY(0);
         text-align: left;
         margin: 0 0 20px;
@@ -7807,7 +7807,3 @@ body {
 .align-\[-4px\] {
     vertical-align: -4px;
 }
-
-
-
-

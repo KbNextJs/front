@@ -267,7 +267,11 @@ body {
     height: 49px;
     border-bottom: 1px solid #fcaf17;
     display: none;
+    z-index: 101;
 }
+/* .dep2 > li > a {
+    border-bottom: 1px solid #fcaf17;
+} */
 #header #sub_gnb .dep3 {
     height: 40px;
     background-color: #fcaf17;

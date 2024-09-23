@@ -13,21 +13,13 @@ export const mobileHeaderPopupState = atom({
     key: 'mobileHeaderPopupState', // unique ID (with respect to other atoms/selectors)
     default: false, // default value (aka initial value)
 });
-
-// export const mobileHeaderPopupStateAside = atom({
-//     key: 'mobileHeaderPopupStateAside', // unique ID (with respect to other atoms/selectors)
-//     default: [false, false, false, false, false, false, false], // default value (aka initial value)
-// });
 export default function RootLayout({ children }) {
     return (
         <RecoilRoot>
             <html lang="en">
-                <Head>
-                    <link rel="icon" href="/favicon.ico" sizes="any" />
-                    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-                    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-                    <link rel="manifest" href="/manifest.json" />
-                </Head>
+                <head>
+                    <title>KB골든라이프케어</title>
+                </head>
                 <body>{children}</body>
             </html>
         </RecoilRoot>

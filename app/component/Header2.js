@@ -10,9 +10,11 @@ import '../public/src_css/a_reset.css';
 import '../public/src_css/fonts.css';
 import '../public/src_css/b_style.css';
 import '../public/src_css/ds_style.css';
+import { useState } from 'react';
 const Header2 = () => {
     const [menuState, setmenuState] = useRecoilState(headerPopupState);
     const [mobileMenuState, setMobileMenuState] = useRecoilState(mobileHeaderPopupState);
+    const [displayState, setDisplayState] = useState('none');
 
     const clickMenu = (e) => {
         console.log('메뉴 변경', menuState, mobileMenuState);
@@ -50,7 +52,17 @@ const Header2 = () => {
                 </h1>
                 <div className="gnb gnb_sub">
                     <ul className="dep1">
-                        <li className="dep1_item">
+                        <li
+                            className="dep1_item"
+                            onMouseEnter={() => {
+                                console.log('hover');
+                                setDisplayState((displayState) => 'block');
+                            }}
+                            onMouseLeave={() => {
+                                console.log('hover');
+                                setDisplayState((displayState) => 'none');
+                            }}
+                        >
                             <a> 회사소개 </a>
                             <div className="dep2_0">
                                 <ul className="dep2">
@@ -77,7 +89,17 @@ const Header2 = () => {
                                 <ul className="dep2"></ul>
                             </div>
                         </li>
-                        <li className="dep1_item">
+                        <li
+                            className="dep1_item"
+                            onMouseEnter={() => {
+                                console.log('hover');
+                                setDisplayState((displayState) => 'block');
+                            }}
+                            onMouseLeave={() => {
+                                console.log('hover');
+                                setDisplayState((displayState) => 'none');
+                            }}
+                        >
                             <a href="/pages/sub02_1" className="on">
                                 {' '}
                                 위례 빌리지<span>요양시설</span>{' '}
@@ -98,7 +120,17 @@ const Header2 = () => {
                                 </ul>
                             </div>
                         </li>
-                        <li className="dep1_item">
+                        <li
+                            className="dep1_item"
+                            onMouseEnter={() => {
+                                console.log('hover');
+                                setDisplayState((displayState) => 'block');
+                            }}
+                            onMouseLeave={() => {
+                                console.log('hover');
+                                setDisplayState((displayState) => 'none');
+                            }}
+                        >
                             <a href="Seocho_Dis.html">
                                 {' '}
                                 서초 빌리지<span>요양시설</span>{' '}
@@ -117,7 +149,17 @@ const Header2 = () => {
                                 </ul>
                             </div>
                         </li>
-                        <li className="dep1_item">
+                        <li
+                            className="dep1_item"
+                            onMouseEnter={() => {
+                                console.log('hover');
+                                setDisplayState((displayState) => 'block');
+                            }}
+                            onMouseLeave={() => {
+                                console.log('hover');
+                                setDisplayState((displayState) => 'none');
+                            }}
+                        >
                             <a href="/pages/sub03_1">
                                 {' '}
                                 케어센터<span>주.야간보호센터</span>{' '}
@@ -136,7 +178,17 @@ const Header2 = () => {
                                 </ul>
                             </div>
                         </li>
-                        <li className="dep1_item">
+                        <li
+                            className="dep1_item"
+                            onMouseEnter={() => {
+                                console.log('hover');
+                                setDisplayState((displayState) => 'block');
+                            }}
+                            onMouseLeave={() => {
+                                console.log('hover');
+                                setDisplayState((displayState) => 'none');
+                            }}
+                        >
                             <a href="/pages/sub1_3_1"> 인재채용 </a>
                             <div className="dep2_5">
                                 <ul className="dep2">
@@ -152,7 +204,17 @@ const Header2 = () => {
                                 </ul>
                             </div>
                         </li>
-                        <li className="dep1_item">
+                        <li
+                            className="dep1_item"
+                            onMouseEnter={() => {
+                                console.log('hover');
+                                setDisplayState((displayState) => 'block');
+                            }}
+                            onMouseLeave={() => {
+                                console.log('hover');
+                                setDisplayState((displayState) => 'none');
+                            }}
+                        >
                             <a href="/pages/bbs"> 게시판 </a>
                             <div className="dep2_6">
                                 <ul className="dep2">
@@ -177,7 +239,17 @@ const Header2 = () => {
                                 </ul>
                             </div>
                         </li>
-                        <li className="dep1_item">
+                        <li
+                            className="dep1_item"
+                            onMouseEnter={() => {
+                                console.log('hover');
+                                setDisplayState((displayState) => 'block');
+                            }}
+                            onMouseLeave={() => {
+                                console.log('hover');
+                                setDisplayState((displayState) => 'none');
+                            }}
+                        >
                             <a href="sub4_1.html"> 노인장기요양보험제도 </a>
                             <div className="dep2_7">
                                 <ul className="dep2">
@@ -196,7 +268,7 @@ const Header2 = () => {
                 </div>
             </div>
             <div id="sub_gnb">
-                <div className="dep2"></div>
+                <div className="dep2" style={{ display: displayState }}></div>
                 <div className="dep3"></div>
             </div>
         </div>

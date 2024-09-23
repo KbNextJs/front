@@ -54,14 +54,11 @@ import { headerPopupState, mobileHeaderPopupState } from './layout';
 export default function Home() {
     const [menuState, setmenuState] = useRecoilState(headerPopupState);
     const [mobileMenuState, setMobileMenuState] = useRecoilState(mobileHeaderPopupState);
-
+    const [isClient, setIsClient] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
-        // const interval = setInterval(() => {
-        //     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-        // }, 5000);
-        // return () => clearInterval(interval);
+        setIsClient(true);
     }, []);
 
     const goToPrevious = () => {
@@ -328,7 +325,7 @@ export default function Home() {
                                 </li>
                             </ul>
                         </div> */}
-                        <div className="image-slider" style={{ height: window.innerWidth / 2 }}>
+                        <div className="image-slider" style={isClient ? { height: window.innerWidth / 2 } : null}>
                             {images.map((image, index) => (
                                 <div key={index} className={`slide ${index === currentIndex ? 'active' : ''}`}>
                                     <img src={image} alt={`Slide ${index + 1}`} />

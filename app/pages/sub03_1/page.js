@@ -14,7 +14,8 @@ import Footer from '@/app/component/footer';
 import Family_site from '@/app/component/family_site';
 import MobileHeader from '@/app/component/mobileHeader';
 
-const Sub03_1 = () => {//완성
+const Sub03_1 = () => {
+    //완성
     return (
         <>
             <Header></Header>
@@ -77,7 +78,7 @@ const Sub03_1 = () => {//완성
                                     <span>02.</span>한 분 한 분 맞춤 케어 서비스
                                 </div>
                                 <div class="contents">
-                                    <div class="figure">
+                                    <div class="figure figure_2">
                                         <img src={sub2_1_img02.src} alt="한 분 한 분 맞춤 케어 서비스" />
                                     </div>
                                     <div class="dscr">
@@ -123,7 +124,7 @@ const Sub03_1 = () => {//완성
                                     활력과 즐거움을 드리는 프로그램
                                 </div>
                                 <div class="contents">
-                                    <div class="figure">
+                                    <div class="figure figure_3">
                                         <img src={sub2_1_img03.src} alt="활력과 즐거움을 드리는 프로그램" />
                                     </div>
                                     <div class="dscr">
