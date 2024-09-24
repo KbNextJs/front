@@ -1,30 +1,26 @@
 'use client';
 import Header from '@/app/component/header';
-import '../../../cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css';
-import '../../public/src_css/c_slides.css';
-import '../../public/src_css/a_reset.css';
-import '../../public/src_css/fonts.css';
-import '../../public/src_css/b_style.css';
-import '../../public/src_css/ds_style.css';
-import '../../css/bbs.css';
-import '../../public/design/co-basic.css';
-import '../../public/design/default_mobile.css';
-import '../../public/design/default_tablet.css';
-import sub2_1_img01 from '../../public/design/images/sub/sub2_1_img01.jpg';
-import sub2_1_img02 from '../../public/design/images/sub/sub2_1_img02.jpg';
-import sub2_1_img03 from '../../public/design/images/sub/sub2_1_img03.jpg';
+import '../../../../cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css';
+import '@/app/public/src_css/c_slides.css';
+import '@/app/public/src_css/a_reset.css';
+import '@/app/public/src_css/fonts.css';
+import '@/app/public/src_css/b_style.css';
+import '@/app/public/src_css/ds_style.css';
+import '@/app/css/bbs.css';
+import '@/app/public/design/co-basic.css';
+import '@/app/public/design/default_mobile.css';
+import '@/app/public/design/default_tablet.css';
 import Header2 from '@/app/component/Header2';
-import ico from '../../public/copy/ico_image.gif';
 import Footer from '@/app/component/footer';
 import Family_site from '@/app/component/family_site';
 import MobileHeader from '@/app/component/mobileHeader';
-import ProgramList from '@/app/component/programList';
 import { programListData } from '@/app/programListData';
+import ProgramList from '@/app/component/programList';
 import { notificationData } from '@/app/notification';
 import NotificationList from '@/app/component/notificationList';
-const Bbs = () => {
+const Bbs_shop = ({ params }) => {
     // 완성
-    //https://www.kbgoldenlifecare.co.kr/bbs/sub05_1
+    const programListDataCategory = programListData.filter((e, i) => e.category === decodeURIComponent(params.id));
     return (
         <>
             <Header></Header>
@@ -49,25 +45,73 @@ const Bbs = () => {
                                     <div class="bd">
                                         <ul>
                                             <li
-                                                style={{
-                                                    display: 'block',
-                                                    color: '#fff',
-                                                    background: '#fcaf17',
-                                                    fontWeight: 'normalizeConfig',
-                                                }}
+                                                style={
+                                                    decodeURIComponent(params.id) === '전체'
+                                                        ? {
+                                                              display: 'block',
+                                                              color: '#fff',
+                                                              background: '#fcaf17',
+                                                              fontWeight: 'normalizeConfig',
+                                                          }
+                                                        : null
+                                                }
                                             >
                                                 <a href="/pages/bbs">전체(1453)</a>
                                             </li>
-                                            <li>
+                                            <li
+                                                style={
+                                                    decodeURIComponent(params.id) === '위례빌리지'
+                                                        ? {
+                                                              display: 'block',
+                                                              color: '#fff',
+                                                              background: '#fcaf17',
+                                                              fontWeight: 'normalizeConfig',
+                                                          }
+                                                        : null
+                                                }
+                                            >
                                                 <a href="/pages/bbs/위례빌리지">위례빌리지(387)</a>
                                             </li>
-                                            <li>
+                                            <li
+                                                style={
+                                                    decodeURIComponent(params.id) === '강동케어센터'
+                                                        ? {
+                                                              display: 'block',
+                                                              color: '#fff',
+                                                              background: '#fcaf17',
+                                                              fontWeight: 'normalizeConfig',
+                                                          }
+                                                        : null
+                                                }
+                                            >
                                                 <a href="/pages/bbs/강동케어센터">강동케어센터(306)</a>
                                             </li>
-                                            <li>
+                                            <li
+                                                style={
+                                                    decodeURIComponent(params.id) === '위례케어센터'
+                                                        ? {
+                                                              display: 'block',
+                                                              color: '#fff',
+                                                              background: '#fcaf17',
+                                                              fontWeight: 'normalizeConfig',
+                                                          }
+                                                        : null
+                                                }
+                                            >
                                                 <a href="/pages/bbs/위례케어센터">위례케어센터(513)</a>
                                             </li>
-                                            <li>
+                                            <li
+                                                style={
+                                                    decodeURIComponent(params.id) === '빌리지'
+                                                        ? {
+                                                              display: 'block',
+                                                              color: '#fff',
+                                                              background: '#fcaf17',
+                                                              fontWeight: 'normalizeConfig',
+                                                          }
+                                                        : null
+                                                }
+                                            >
                                                 <a href="/pages/bbs/서초 빌리지">서초 빌리지(246)</a>
                                             </li>{' '}
                                         </ul>
@@ -75,6 +119,13 @@ const Bbs = () => {
                                 </div>
                             </div>
                             <div class="bbs_con">
+                                {/* <link
+                                    rel="stylesheet"
+                                    type="text/css"
+                                    href="../img_up/shop_pds/kbgoldenlife/design/co-basic.css"
+                                    media="screen"
+                                /> */}
+
                                 <div id="scbd" class="scbd co-basic">
                                     <div class="hd_list">
                                         <div class="ui-toggle">
@@ -188,9 +239,8 @@ const Bbs = () => {
                                                 );
                                             })}
                                         </ul>
-
                                         <ul class="lst-board lst-body">
-                                            {programListData.map((e, i) => {
+                                            {programListDataCategory.map((e, i) => {
                                                 return (
                                                     <ProgramList
                                                         key={i}
@@ -242,4 +292,4 @@ const Bbs = () => {
     );
 };
 
-export default Bbs;
+export default Bbs_shop;
