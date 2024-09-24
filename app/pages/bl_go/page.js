@@ -20,7 +20,7 @@ const Bl_go = () => {
     return (
         <>
             <Header></Header>
-            <MobileHeader/>
+            <MobileHeader />
             <div id="layout_body" class="layout_sub">
                 <Header2></Header2>
                 <div class="sub_con wrap">
@@ -79,7 +79,7 @@ const Bl_go = () => {
                             </div>
                         </div>
                         <div class="bl_go_button">
-                            <a href="https://kbglc.carefor.co.kr/csboard">고객의 소리 접수 및 답변 확인하기</a>
+                            <a href="/pages/csboard">고객의 소리 접수 및 답변 확인하기</a>
                         </div>
                     </div>
                 </div>

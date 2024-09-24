@@ -254,7 +254,7 @@ const Sub1_2_1 = () => {
                                     </div>
                                 </div>
                                 <div class="t_r btn_wrap">
-                                    <a href="../myreg/volunteer.html" class="sub_btn_move">
+                                    <a href="/pages/volunteer" class="sub_btn_move">
                                         자원봉사 신청하기
                                     </a>
                                 </div>
