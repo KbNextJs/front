@@ -68,7 +68,7 @@ const Recruit = () => {
                                     <span class="w_no">6</span>
                                     <span class="w_area">평창 카운티</span>
                                     <span class="w_sub tl">
-                                        <a href="viewc2fe.html?rcrt_adv_sno=22163">평창 카운티 사우나 관리 채용</a>
+                                        <a href="/pages/recruit/list/6">평창 카운티 사우나 관리 채용</a>
                                     </span>
                                     <span class="w_part">사우나관리</span>
                                     <span class="w_date">2024.09.10</span>
@@ -79,7 +79,7 @@ const Recruit = () => {
                                     <span class="w_no">5</span>
                                     <span class="w_area">평창 카운티</span>
                                     <span class="w_sub tl">
-                                        <a href="viewadef.html?rcrt_adv_sno=22140">평창 카운티 조리원 상시 채용</a>
+                                        <a href="/pages/recruit/list/5">평창 카운티 조리원 상시 채용</a>
                                     </span>
                                     <span class="w_part">조리원</span>
                                     <span class="w_date">2024.05.02</span>
@@ -90,7 +90,7 @@ const Recruit = () => {
                                     <span class="w_no">4</span>
                                     <span class="w_area">위례빌리지</span>
                                     <span class="w_sub tl">
-                                        <a href="viewc0d5.html?rcrt_adv_sno=22133">위례 빌리지 조리원 상시 채용</a>
+                                        <a href="/pages/recruit/list/4">위례 빌리지 조리원 상시 채용</a>
                                     </span>
                                     <span class="w_part">조리원</span>
                                     <span class="w_date">2024.03.25</span>
@@ -101,7 +101,7 @@ const Recruit = () => {
                                     <span class="w_no">3</span>
                                     <span class="w_area">위례빌리지</span>
                                     <span class="w_sub tl">
-                                        <a href="viewc0c3.html?rcrt_adv_sno=22108">위례 빌리지 조리사 상시 채용</a>
+                                        <a href="/pages/recruit/list/3">위례 빌리지 조리사 상시 채용</a>
                                     </span>
                                     <span class="w_part">조리사</span>
                                     <span class="w_date">2024.02.01</span>
@@ -112,7 +112,7 @@ const Recruit = () => {
                                     <span class="w_no">2</span>
                                     <span class="w_area">위례빌리지</span>
                                     <span class="w_sub tl">
-                                        <a href="view4c80.html?rcrt_adv_sno=22100">위례 빌리지 요양보호사 상시 채용</a>
+                                        <a href="/pages/recruit/list/2">위례 빌리지 요양보호사 상시 채용</a>
                                     </span>
                                     <span class="w_part">요양보호사</span>
                                     <span class="w_date">2024.01.17</span>
@@ -123,7 +123,7 @@ const Recruit = () => {
                                     <span class="w_no">1</span>
                                     <span class="w_area">서초 빌리지</span>
                                     <span class="w_sub tl">
-                                        <a href="view8f4a.html?rcrt_adv_sno=22095">서초 빌리지 요양보호사 상시 채용</a>
+                                        <a href="/pages/recruit/list/1">서초 빌리지 요양보호사 상시 채용</a>
                                     </span>
                                     <span class="w_part">요양보호사</span>
                                     <span class="w_date">2024.01.05</span>

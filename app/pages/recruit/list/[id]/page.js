@@ -1,30 +1,17 @@
 'use client';
-import Header from '@/app/component/header';
-import '../../../cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css';
-import '../../public/src_css/c_slides.css';
-import '../../public/src_css/a_reset.css';
-import '../../public/src_css/fonts.css';
-import '../../public/src_css/b_style.css';
-import '../../public/src_css/ds_style.css';
-import '../../css/apply.css';
-import '../../css/select2.css';
 import { useRouter } from 'next/navigation';
+import '../../../../../cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css';
+import '@/app/public/src_css/c_slides.css';
+import '@/app/public/src_css/a_reset.css';
+import '@/app/public/src_css/fonts.css';
+import '@/app/public/src_css/b_style.css';
+import '@/app/public/src_css/ds_style.css';
+import '@/app/css/apply.css';
+import '@/app/css/select2.css';
+import kb_logo_sub from '@/app/public/img_apply/kb_logo_sub.png';
+import footer_logo_kb from '@/app/public/img_apply/footer_logo_kb.png';
 
-{
-    /* <link media="all" type="text/css" rel="stylesheet" href="../css/apply.css">
-<link media="all" type="text/css" rel="stylesheet" href="../js/jquery-ui.css">
-<link media="all" type="text/css" rel="stylesheet" href="../css/select2.css">
-<link media="all" type="text/css" rel="stylesheet" href="../fullCalendar/main.min.css"> */
-}
-import kb_logo_sub from '../../public/img_apply/kb_logo_sub.png';
-import footer_logo_kb from '../../public/img_apply/footer_logo_kb.png';
-import sub2_1_img03 from '../../public/design/images/sub/sub2_1_img03.jpg';
-import Header2 from '@/app/component/Header2';
-import family_tit from '../../public/design/images/skin/family_tit.png';
-import Footer from '@/app/component/footer';
-import Family_site from '@/app/component/family_site';
-
-const Recruit = () => {
+const Recruit = ({ params }) => {
     // 세부내용 추가 해야함
     //https://admin.kbgoldenlifecare.co.kr/recruit/main
     const router = useRouter();
@@ -52,20 +39,8 @@ const Recruit = () => {
                         <div id="btn-mobile-menu"></div>
                     </div>
 
-                    <div id="content">
-                        <div id="content_w">
-                            <div class="apply_title">KB골든라이프케어 채용 시스템</div>
-                            <div class="apply_toptxt fw">- 원하시는 메뉴를 선택해주세요.</div>
-                            <div class="recruit_btn_pos">
-                                <div class="recruit_box" onClick={() => router.push('/pages/recruit/list')}>
-                                    <p>채용지원</p>
-                                </div>
-                                <div class="recruit_box" onClick={() => router.push('/pages/recruit/chk')}>
-                                    <p>지원확인</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {/* ------------ params.id에 따라 다른 콘텐츠 추가 부분------------ */}
+                    {params.id + '페이지'}
 
                     <div id="copyright">
                         <div class="copy_gap"></div>

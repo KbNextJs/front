@@ -203,7 +203,7 @@ export default function Home() {
                                                 <a href="/pages/sub1_3_2">직무소개</a>
                                             </li>{' '}
                                             <li>
-                                                <a href="https://admin.kbgoldenlifecare.co.kr/recruit/main">채용공고</a>
+                                                <a href="/pages/recruit">채용공고</a>
                                             </li>{' '}
                                         </ul>
                                     </div>{' '}
@@ -225,7 +225,7 @@ export default function Home() {
                                                 <a href="/pages/sub05_3">견학안내</a>
                                             </li>{' '}
                                             <li>
-                                                <a href="bbs/sub2_3_1">상담신청</a>
+                                                <a href="/bbs/sub2_3_1">상담신청</a>
                                             </li>{' '}
                                             <li>
                                                 <a href="/pages/bl_go">고객의 소리</a>
